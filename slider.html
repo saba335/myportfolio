@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+            
+        <style>
+ /* Slide Up */
+ @keyframes slideUp {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Slide Down */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Slide Right */
+@keyframes slideRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+/* Apply these animations when the corresponding classes are active */
+.carousel-item.slideup {
+    animation: slideUp 1.0s forwards;
+}
+
+.carousel-item.slidedown {
+    animation: slideDown 0.8s forwards;
+}
+
+.carousel-item.slideright {
+    animation: slideRight 0.8s forwards;
+}
+
+
+.counting {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+        </style>
+    </head>
+    <body>
+        <section id="carouselExampleFade" class="carousel slide" data-ride="carousel" data-interval="2000" data-pause="false">
+    <div class="carousel-inner">
+        <div class="carousel-item active slideup"> <!-- Added 'slideup' class -->
+            <img src="img/exh1.jpg" class="d-block" alt="...">
+            <div class="carousel-caption">
+                <div class="p-3" style="background-color:rgba(0,0, 0,0.4);">
+                    <h2>"St. Joseph's College: Excellence in Education"</h2>
+                    <p class="fw-bold">St. Joseph's College is a distinguished institution committed to providing a transformative
+                        education rooted in academic excellence, moral values, and holistic development.</p>
+                </div>
+               
+                <div class="button-01">
+                    <ul>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="Gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item slideright"> <!-- Added 'slideright' class -->
+            <img src="img/exh2.jpg" class="d-block" alt="...">
+            <div class="carousel-caption" >
+                <div class="p-3"   style="background-color:rgba(0,0, 0,0.3);">
+                    <h2>"Empowering Minds at St. Joseph's College"</h2>
+                    <p class="fw-bold">Founded on principles of integrity and service, the college offers a diverse range of programs
+                        designed to foster intellectual growth and personal development. </p>
+                </div>
+               
+                <div class="button-01">
+                    <ul>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="Gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item slidedown"> <!-- Added 'slidedown' class -->
+            <img src="img/exh2.jpg" class="d-block" alt="...">
+            <div class="carousel-caption">
+                <div  class="p-3" style="background-color:rgba(0,0, 0,0.3);">
+                    <h2>"St. Joseph's College: Where Tradition Meets Innovation"</h2>
+                    <p class="fw-bold">With a dedicated faculty, vibrant campus community, and a tradition of nurturing leadership and
+                        character, St. Joseph's College prepares students to excel in their chosen fields and make a
+                        positive impact on society.</p>
+                </div>
+               
+                <div class="button-01">
+                    <ul>
+                        <li><a href="about-us.html">About us</a></li>
+                        <li><a href="Gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</section>
+<script>
+    AOS.init();
+   window.addEventListener('scroll', function() {
+           var section = document.querySelector('.bg-01');
+           var position = section.getBoundingClientRect().top;
+           var windowHeight = window.innerHeight;
+   
+           if (position < windowHeight - 100) {
+               section.classList.add('show');
+           } else {
+               section.classList.remove('show');
+           }
+       });
+       window.addEventListener('scroll', function() {
+           var section = document.querySelector('.se-001');
+           var position = section.getBoundingClientRect().top;
+           var windowHeight = window.innerHeight;
+   
+           // Check if the section is in view
+           if (position < windowHeight - 100) {
+               section.classList.add('show');
+           } else {
+               section.classList.remove('show');
+           }
+       });
+   
+   
+   $('#carouselExampleFade').on('slide.bs.carousel', function (e) {
+       var $next = $(e.relatedTarget);
+       var idx = $next.index();
+       var direction = e.direction;
+   
+   
+       if (direction === 'left') {
+           // Apply the slide right animation when moving to the next slide
+           $next.addClass('slideright');
+       } else if (direction === 'up') {
+           // Apply slide up when scrolling upwards
+           $next.addClass('slideup');
+       } else if (direction === 'down') {
+           // Apply slide down when scrolling downwards
+           $next.addClass('slidedown');
+       }
+   });
+   
+   function animateCounter(element) {
+               const finalCount = parseInt(element.getAttribute('data-count'), 10);
+               let currentCount = 0;
+               const increment = finalCount / 100;
+   
+               const counter = setInterval(() => {
+                   currentCount += increment;
+                   element.textContent = Math.ceil(currentCount);
+   
+                   if (currentCount >= finalCount) {
+                       element.textContent = finalCount;
+                       clearInterval(counter);
+                   }
+               }, 20);
+           }
+   
+           function isElementInView(el) {
+               const rect = el.getBoundingClientRect();
+               return (rect.top <= window.innerHeight && rect.bottom >= 0);
+           }
+   
+           window.addEventListener('scroll', function() {
+               const counters = document.querySelectorAll('.counting');
+   
+               counters.forEach(counter => {
+                   if (isElementInView(counter) && !counter.classList.contains('counted')) {
+                       animateCounter(counter);
+                       counter.classList.add('counted');
+                   }
+               });
+           });
+   
+           // Run on page load in case elements are in view initially
+           document.addEventListener('DOMContentLoaded', function() {
+               const counters = document.querySelectorAll('.counting');
+   
+               counters.forEach(counter => {
+                   if (isElementInView(counter)) {
+                       animateCounter(counter);
+                       counter.classList.add('counted');
+                   }
+               });
+           });
+   
+   </script>
+    </body>
+</html>

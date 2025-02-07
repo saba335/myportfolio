@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax Scrolling Example</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header, .footer, .section {
+      text-align: center;
+      padding: 60px 20px;
+      color: white;
+    }
+
+    .parallax {
+      position: relative;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: center;
+      height: 400px; /* Adjust as needed */
+    }
+
+    .parallax-header {
+      background-image: url('rain.gif'); /* Replace with your image */
+    }
+
+    .parallax-footer {
+      background-image: url('project-4.jpg'); /* Replace with your image */
+    }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .section {
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    h1, h2 {
+      margin: 0;
+      padding: 0;
+    }
+
+    parallax-mouse {
+    perspective: 1000px;
+  }
+  .parallax-mouse img {
+    transform: translateZ(-50px);
+    transition: transform 0.1s;
+  }
+  </style>
+</head>
+<body>
+  <header class="parallax parallax-header">
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>Scroll down to see the parallax effect</p>
+    </div>
+  </header>
+  <section class="section">
+    <h2>Section 1</h2>
+    <p>This is a regular section.</p>
+  </section>
+  <section class="section">
+    <h2>Section 2</h2>
+    <p>This is another regular section.</p>
+  </section>
+  <footer class="parallax parallax-footer">
+    <div class="content">
+      <h2>Footer</h2>
+      <p>More content here</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('mousemove', function(e) {
+      let x = (e.clientX / window.innerWidth) * 30;
+      let y = (e.clientY / window.innerHeight) * 30;
+      document.querySelector('.parallax-mouse img').style.transform = `translate3d(${x}px, ${y}px, -50px)`;
+    });
+</script>
+</body>
+</html>

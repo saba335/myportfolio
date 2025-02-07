@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #000; /* Background color to help make the glow visible */
+    margin: 0;
+}
+
+.glow-blob {
+    width: 200px;
+    height: 300px;
+    background-color: #00f2ff;
+    border-radius: 50% 40% 60% 40% / 40% 50% 30% 60%; /* Create an irregular blob shape */
+    position: relative;
+    box-shadow: 0 0 60px rgba(0, 242, 255, 0.5), 0 0 100px rgba(0, 242, 255, 0.4), 0 0 140px rgba(0, 242, 255, 0.3);
+}
+
+.glow-blob::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 180px;
+    height: 250px;
+    border-radius: 50% 40% 60% 40% / 40% 50% 30% 60%;
+    background-color: #00f2ff;
+    opacity: 0.5;
+    filter: blur(30px);
+    z-index: -1;
+}
+
+    </style>
+    <body>
+        <div class="glow-blob"></div>
+
+    </body>
+</html>

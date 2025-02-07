@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    color: #404040;
+    font-family: "Quicksand", serif;
+  }
+  
+  #main {
+    background-image: url("banner.jpg");
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f4f8ff;
+  }
+  
+  #postOfficeDetails {
+    display: none;
+  }
+  
+  #search {
+    width: 40%;
+  }
+  
+  #demoTitle {
+    text-align: center;
+    font-family: cursive !important;
+  }
+  
+  #searchBtn {
+    width: 55px;
+  }
+  
+  #category {
+    text-align: center;
+  }
+  
+  #loadingIcon {
+    display: none;
+    margin-top: 3em;
+    width: 50px;
+  }
+  
+  #postOfficeDataTable th {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    search {
+      -webkit-flex-direction: column;
+      flex-direction: column;
+    }
+  }

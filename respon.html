@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect with Side Content</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Container for each card and the hidden details */
+        .recipe-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 20px;
+            overflow: hidden; /* Ensure that content doesn't overflow during transitions */
+            width: 100%; /* Ensure container takes full width */
+            flex-wrap: wrap; /* Allow content to wrap on smaller screens */
+        }
+
+        /* Card styling */
+        .recipe-card {
+            flex: 1;
+            cursor: pointer;
+            border: none; /* Remove the outline/border of the card */
+            box-shadow: none; /* Remove any shadow if Bootstrap is adding it */
+            transition: flex 0.5s ease-in-out; /* Smooth transition on hover */
+        }
+
+        .recipe-card .card-body {
+            padding: 34px;
+            background-color: blue;
+            color: white;
+            transition: all 0.5s ease-in-out; /* Ensure smooth transition */
+        }
+
+        /* Hidden details container initially hidden */
+        .recipe-details {
+            visibility: hidden;
+            opacity: 0;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-left: 15px; /* Add margin to create space between the main card and details */
+            transition: visibility 0s, opacity 0.5s ease-in-out; /* Smooth fade-in */
+            flex-wrap: wrap; /* Allow wrapping of detail cards on smaller screens */
+        }
+
+        /* Hover effect for shrinking the card body */
+        .recipe-container:hover .recipe-card {
+            flex: 0.4; /* Shrink the card to less than half its original size */
+        }
+
+        /* Show the details when hovering over the card */
+        .recipe-container:hover .recipe-details {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Individual card styling for details */
+        .detail-card {
+            background-color: #f0e119;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease, transform 0.5s ease; /* Use transition for the hover effect */
+            flex: 1 1 200px; /* Make detail cards responsive with flex-basis */
+        }
+
+        /* Hover effect to trigger animation on hover */
+        .recipe-container:hover .detail-card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Define animation delays specifically for hover state */
+        .recipe-container:hover .recipe-details .detail-card:nth-child(1) {
+            transition-delay: 0.6s;
+        }
+
+        .recipe-container:hover .recipe-details .detail-card:nth-child(2) {
+            transition-delay: 0.9s;
+        }
+
+        .recipe-container:hover .recipe-details .detail-card:nth-child(3) {
+            transition-delay: 1.3s;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .recipe-card {
+                flex: 1 1 100%; /* Take full width on smaller devices */
+            }
+
+            .recipe-card .card-body {
+                font-size: 0.9rem; /* Slightly smaller text size */
+                padding: 20px; /* Adjust padding for smaller screens */
+            }
+
+            .recipe-details {
+                margin-left: 0; /* Remove left margin on smaller screens */
+                gap: 5px; /* Reduce gap between detail cards */
+                justify-content: space-around; /* Center align details on smaller devices */
+            }
+        }
+
+
+        @media (max-width: 600px) {
+            .recipe-card {
+                flex: 1 1 100%; /* Ensure card takes full width on very small screens */
+            }
+
+            .recipe-card .card-body {
+                font-size: 0.8rem; /* Smaller text size */
+                padding: 30px; /* Reduce padding for very small screens */
+            }
+
+            .detail-card {
+                padding: 8px; /* Reduce padding on detail cards for small screens */
+                font-size: 0.8rem; /* Smaller text on detail cards */
+                flex: 1 1 100%; /* Stack detail cards on top of each other on mobile */
+                margin-bottom: 8px; /* Add spacing between stacked cards */
+            }
+
+            .recipe-details {
+                flex-direction: column; /* Stack detail cards vertically on mobile */
+                gap: 7px;
+            }
+        }
+
+
+        @media (max-width: 576px) {
+            .recipe-card {
+                flex: 1 1 100%; /* Ensure card takes full width on very small screens */
+            }
+
+            .recipe-card .card-body {
+                font-size: 0.8rem; /* Smaller text size */
+                padding: 25px; /* Reduce padding for very small screens */
+            }
+
+            .detail-card {
+                padding: 15px; /* Reduce padding on detail cards for small screens */
+                font-size: 0.8rem; /* Smaller text on detail cards */
+                flex: 1 1 100%; /* Stack detail cards on top of each other on mobile */
+                margin-bottom: 10px; /* Add spacing between stacked cards */
+            }
+
+            .recipe-details {
+                flex-direction: column; /* Stack detail cards vertically on mobile */
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid mt-5">
+        <!-- Recipe Container -->
+        <div class="recipe-container">
+            <!-- Recipe question card -->
+            <div class="card recipe-card">
+                <div class="card-body">
+                    <p class="card-text text-center">Are You an Investor?</p>
+                </div>
+            </div>
+
+            <!-- Side content with details -->
+            <div class="recipe-details">
+                <!-- First Detail Card -->
+                <div class="detail-card">
+                    <p>Looking for appreciating investment.</p>
+                </div>
+
+                <!-- Second Detail Card -->
+                <div class="detail-card">
+                    <p>Looking for long-term investment.</p>
+                </div>
+
+                <!-- Third Detail Card -->
+                <div class="detail-card">
+                    <p>Looking for secondary income.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

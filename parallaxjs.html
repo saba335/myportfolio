@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallax with parallax.js</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .parallax-container {
+      position: relative;
+      height: 500px;
+      overflow: hidden;
+    }
+    .parallax-img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .content {
+      position: relative;
+      z-index: 10;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+      background: rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="parallax-container">
+    <div class="parallax-img" data-parallax="scroll" data-image-src="project-4.jpg"></div>
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>Scroll down to see the parallax effect.</p>
+    </div>
+    <div class="parallax-img" data-parallax="scroll" data-image-src="project-4.jpg"></div>
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>Scroll down to see the parallax effect.</p>
+    </div>
+    <div class="parallax-img" data-parallax="scroll" data-image-src="project-4.jpg"></div>
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>Scroll down to see the parallax effect.</p>
+    </div>
+    <div class="parallax-img" data-parallax="scroll" data-image-src="project-4.jpg"></div>
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>Scroll down to see the parallax effect.</p>
+    </div>
+    <div class="parallax-img" data-parallax="scroll" data-image-src="project-4.jpg"></div>
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>Scroll down to see the parallax effect.</p>
+    </div>
+    <div class="parallax-img" data-parallax="scroll" data-image-src="project-4.jpg"></div>
+    <div class="content">
+      <h1>Welcome to My Website</h1>
+      <p>Scroll down to see the parallax effect.</p>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/parallax-js@1.5.0/dist/parallax.min.js"></script>
+  <script>
+    var scene = document.querySelector('.parallax-container');
+    var parallaxInstance = new Parallax(scene);
+  </script>
+</body>
+</html>

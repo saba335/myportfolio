@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+              <title>merge</title>
+              <!-- Favicon-->
+              <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+              <!-- Font Awesome icons (free version)-->
+              <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+              <!-- Simple line icons-->
+              <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css" rel="stylesheet" />
+              <!-- Google fonts-->
+              <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+              <!-- Core theme CSS (includes Bootstrap)-->
+              <link href="styles.css" rel="stylesheet" />
+        <style>
+    .portfolio-item img {
+    width: 100%; /* Make the image fit within its container */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+
+}
+
+.portfolio-item {
+    display: block;
+    overflow: hidden; /* Prevents any overflow of content */
+    margin-bottom: 30px; /* Space between items */
+}
+
+/* General styles for the content section */
+.content-section2 {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.content-section-heading h3 {
+  color: #6c757d; /* Secondary text color */
+}
+
+.content-section-heading h2 {
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* Portfolio item styles */
+.portfolio-item {
+  display: block;
+  background-color: #fff;
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2); /* Blue shadow */
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.portfolio-item:hover {
+  border-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4); /* Darker blue shadow on hover */
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #007bff; /* Blue border under image */
+}
+
+.caption-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.caption-content .h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.caption-content p {
+  color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .content-section2 .row {
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+  
+  .portfolio-item {
+    border-width: 1px; /* Thinner border on smaller screens */
+  }
+}
+
+
+
+        </style>
+    </head>
+    <body>
+       
+            <div class="filter-buttons scroll-scale">
+               <button class="button" data-filter="all">All</button> 
+               <button class="button" data-filter=".product">Product</button> 
+               <button class="button" data-filter=".inter">Interacting</button> 
+               <button class="button" data-filter=".web">Web App</button> 
+            </div>
+
+        <section class="content-section2" id="portfolio">
+            <div class="container px-4 px-lg-5">
+                <div class="content-section-heading text-center">
+                    <h3 class="text-secondary mb-0">Portfolio</h3>
+                    <h2 class="mb-5">Recent Projects</h2>
+                </div>
+                <div class="row gx-4">
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="index1.html">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Stationary</div>
+                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                                </div>
+                            </div>
+                            <div class="img-wrapper">
+                                <img class="img-fluid" src="filter1.png" alt="..." />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="weather.html">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Ice Cream</div>
+                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                                </div>
+                            </div>
+                            <div class="img-wrapper">
+                            <img class="img-fluid" src="we.jpg" alt="..." />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="postal.html">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Strawberries</div>
+                                    <p class="mb-0">Strawberries are such a tasty snack, especially with a little sugar on top!</p>
+                                </div>
+                            </div>
+                            <div class="img-wrapper"> <img class="img-fluid" src="post.jpg" alt="..." /></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="#!">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Workspace</div>
+                                    <p class="mb-0">A yellow workspace with some scissors, pencils, and other objects.</p>
+                                </div>
+                            </div>
+                            <div class="img-wrapper"><img class="img-fluid" src="api.svg" alt="..." /></div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="gif1.html">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Stationary</div>
+                                    <p class="mb-0">A yellow pencil with envelopes on a clean, blue backdrop!</p>
+                                </div>
+                            </div>
+                            <div class="img-wrapper">
+                                <img class="img-fluid" src="fe.jpg" alt="..." />
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-6">
+                        <a class="portfolio-item" href="calculator.html">
+                            <div class="caption">
+                                <div class="caption-content">
+                                    <div class="h2">Ice Cream</div>
+                                    <p class="mb-0">A dark blue background with a colored pencil, a clip, and a tiny ice cream cone!</p>
+                                </div>
+                            </div>
+                            <div class="img-wrapper">
+                            <img class="img-fluid" src="calu.png" alt="..." />
+                            </div>
+                        </a>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

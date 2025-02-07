@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="pos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="ost.js"></script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="p-2 mx-auto" id="demoTitle">
+            <h4>Indian Postal API</h4>
+        </div>
+        <div class="input-group mx-auto" id="search">
+            <input type="text" id="data" class="form-control" placeholder="Enter a value to search..." />
+            <div class="input-group-append">
+                <button type="button" class="btn btn-sm btn-primary" id="searchBtn">
+                    <i class="fa fa-search" style="color: white"></i>
+                </button>
+                <button type="button" class="btn btn-sm btn-secondary" id="resetBtn">
+                    <i class="fa fa-times" style="color: white"></i>
+                </button>
+            </div>
+        </div>
+        <div class="form-check" style="text-align: center;left: 32%;position: absolute;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="pincodeID" checked>
+            <label class="form-check-label" for="flexCheckDefault">
+                Search by Postal PIN Code
+            </label>
+        </div>
+        <div class="form-check" style="text-align: center;position: absolute;left: 49%;">
+            <input class="form-check-input" type="radio" name="flexRadioDefault" id="branchOfficeID">
+            <label class="form-check-label" for="flexCheckChecked">
+                Search by Post Office Branch Name
+            </label>
+        </div>
+    </div>
+    <div class="p-3 mx-auto" id="postOfficeDetails">
+        <p><b id="resultMsg"></b></p>
+        <table class="table table-striped table-bordered table-sm" id="postOfficeDataTable">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Post Office</th>
+                    <th scope="col">Branch Type</th>
+                    <th scope="col">Region</th>
+                    <th scope="col">District</th>
+                    <th scope="col">Pincode</th>
+                </tr>
+            </thead>
+            <tbody id="bindpostOfficeDetails"></tbody>
+        </table>
+    </div>
+</body>
+
+</html>

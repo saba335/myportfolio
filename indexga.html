@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Meta tag for author -->
+      <meta name="author" content="DharwadHubballiTutor">
+       <!-- Meta tag for description (appears in search results) -->
+    <meta name="description" content="Gaonkars Shree Gurudatta Jeweller, established on December 31, 1983, has been a cherished name in the jewelry industry for over four decades. Renowned for its exquisite craftsmanship and timeless designs, this esteemed establishment has built a reputation for quality and reliability. Combining traditional artistry with modern techniques, Gaonkars Shree Gurudatta Jeweller offers a wide range of elegant jewelry, from classic to contemporary, catering to diverse tastes and occasions. Their commitment to excellence and customer satisfaction has made them a trusted destination for those seeking exceptional and meaningful adornments.">
+     <!-- Meta tag for keywords (helpful for SEO) -->
+     <meta name="keywords" content="jewelry, jewellers, Gaonkar's, Shree Gurudatta, gold, silver, diamonds">
+      <!-- Meta tag for page language -->
+    <meta name="language" content="English">
+
+    <!-- Meta tag for copyright -->
+    <meta name="copyright" content="© 2024 Gaonkar's Shree Gurudatta Jewellers. All rights reserved.">
+     <!-- Title of the page -->
+     <title>Gaonkar's Shree Gurudatta Jewellers</title>
+  
+     <!-- Bootstrap CSS -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!-- AOS CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    
+    
+
+
+
+
+    <!-- Custom CSS -->
+    <style>
+
+* {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Prevent horizontal scrolling */
+
+
+/* Ensure that carousel images and container are responsive */
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
+
+/* Add this to prevent overflow of other sections */
+.hero, .other-content, .carousel {
+    max-width: 100%;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Additional responsive adjustments for smaller screens */
+@media (max-width: 576px) {
+    .carousel-caption h5, .carousel-caption p {
+        font-size: 14px; /* Adjust the font size to fit small screens */
+    }
+
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+        .hero {
+            background-color:rgb(179, 106, 94);
+            background-size: cover;
+          
+            color:white;
+            text-align: center;
+            padding-bottom: 8%;
+            z-index: 1; /* Ensures content scrolls over the carousel */
+            font-family: Sofia, serif;
+}
+        
+        .hero h1 {
+            font-size: 3rem;
+            padding-top: 8%;
+        }
+        .hero2 {
+            background-color:rgb(179, 106, 94);
+            background-size: cover;
+          
+            color:white;
+            text-align: center;
+            padding-bottom: 8%;
+            
+            font-family: Sofia, serif;
+}
+        
+        .hero2 h1 {
+            font-size: 3rem;
+            padding-top: 8%;
+        }
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: .5rem;
+            overflow: hidden;
+        }
+        .product-card img {
+            width: 100%;
+            height: 450px; 
+            object-fit: cover; 
+        }
+        .product-card .card-body {
+            text-align: center;
+            font-family:sans-serif;
+        }
+        .product-card .btn {
+            background-color:rgb(179, 106, 94);
+            border: none;
+        }
+        .product-card .btn:hover {
+            background-color: rgb(179, 106, 94);
+        }
+
+        .modal-footer button{
+            background-color:rgb(179, 106, 94);
+
+        }
+        .modal-footer .btn:hover{
+            background-color:rgb(179, 106, 94);
+
+        }
+        .carousel-item img {
+            height: 600px; 
+            object-fit: cover; 
+        }
+       
+        
+
+         /* Sticky Navbar CSS */
+         .navbar {
+            position: sticky;
+            top: 0;
+            z-index: 1020; 
+           
+        }
+
+       
+
+
+
+/* Navbar Search Bar */
+.navbar .form-control {
+    width: 200px; 
+    border-radius: .25rem;
+}
+
+.navbar .btn-outline-primary {
+    border-radius: .25rem;
+}
+
+/* Adjust spacing and alignment */
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.2rem;
+    color: #333; 
+    text-transform: uppercase; 
+}
+
+.navbar-brand b {
+    font-size: 27px;
+    padding-left: 10px;
+    color:rgb(179, 106, 94); 
+ 
+}
+
+.navbar-brand p{
+    font-size: 9px;
+    color: #555; 
+    padding-left: 19px;
+}
+
+/* Add some spacing between brand lines */
+.brand-text {
+    line-height: 1.2;
+}
+
+/* Add hover effect */
+.navbar-brand:hover {
+    color: #e91e63;
+}
+
+.navbar-brand:hover b {
+    color: #d81b60; 
+}
+
+.navbar-brand:hover p{
+    color: #333; 
+}
+
+
+/* Product Card Hover Effects */
+.product-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.05); 
+    
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transform: translateY(-5px); 
+}
+.navbar-brand i{
+    font-size: 9px;
+    
+}
+
+
+.about-image {
+    display: block;
+    margin: auto;
+    margin-bottom: 20px; 
+    border: 2px solid #d4af37; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.brand-text {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.brand-text b {
+   
+    display: inline;
+    
+}
+.brand-text i{
+    padding-left: 4%;
+}
+.modal-body{
+    font-family:serif;
+}
+
+
+
+
+.carousel-item img {
+            width: 100%;
+            height:auto;
+        }
+        .carousel-caption {
+            bottom: 20px; /* Adjust as needed */
+        }
+
+        .navbar-nav .nav-link {
+        transition: color 0.3s ease; /* Smooth transition effect */
+    }
+
+    .navbar-nav .nav-link:hover {
+        color: rgb(161, 95, 85); /* Change this to the desired hover color */
+       
+    }
+   /* Hide the close button on larger screens */
+
+
+   .scroll-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            display: none; 
+            background-color: #f8f9fa;
+            border: none;
+            outline: none;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+           
+        }
+        .scroll-to-top:hover {
+            background-color: #ddd;
+        } 
+/* Sticky carousel */
+#carousel {
+    position: sticky; 
+    top: 0px; 
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    z-index: -1; 
+   
+}
+
+
+.carousel-item img {
+    width: 100%;
+  
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 200%; 
+}
+
+.other-content {
+    position: relative;
+    z-index: 1; 
+    padding: 100px 0;
+    background-color: white; 
+}
+
+
+#carousel {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.other-content,
+.hero {
+    margin-top: 0;
+    padding-top: 0;
+}
+body {
+        overflow-x: hidden;
+      
+    }
+    
+    .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: auto; /* Ensure the container allows the image to grow */
+        }
+
+        .overlap-img {
+          margin-left: -30px; /* Adjust the value for overlap */
+          z-index: 1;
+          transition: transform 0.3s ease;
+          height: 350px !important; /* Force the height to be 700px */
+        }
+
+        /* No overlap for the first image */
+        .overlap-img:first-child {
+          margin-left: 0;
+        }
+
+        /* Middle image styling: make it larger */
+        .overlap-img:nth-child(2) {
+  z-index: 5;
+  height: 394px !important; /* Force the height to be 700px */
+ 
+}
+
+        .overlap-img:hover {
+          z-index: 10; /* Bring any hovered image to the front */
+          transform: scale(1.05); /* Slight zoom on hover */
+        }
+       /* Parallax effect for the About Section with lower opacity */
+.parallax-container {
+  background-image: url('para4.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  color: #fff;
+  position: relative;
+  padding: 50px 0;
+  z-index: 1;
+}
+
+/* Add a semi-transparent overlay for reduced opacity effect */
+.parallax-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity here */
+  z-index: 2; /* Overlay sits on top of the background */
+}
+
+.parallax-container .container {
+  position: relative;
+  z-index: 3; /* Ensure content is above the overlay */
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlap-img {
+  margin-left: -30px; /* Adjust the value for overlap */
+  z-index: 1;
+  transition: transform 0.3s ease; 
+  height: 300px;
+}
+
+
+.overlap-img:hover {
+  z-index: 10; /* Bring the hovered image to the front */
+  transform: scale(1.05); /* Increase zoom for a more noticeable effect */
+}
+/* Additional content styling */
+h3 {
+  color: rgb(139, 109, 106);
+}
+
+
+
+/* Hide the 1st and 3rd images on mobile and laptop devices */
+@media only screen and (max-width: 1024px) {
+  /* Targets screens up to 1024px, which includes most mobile and laptop sizes */
+  .image-container img:nth-child(1), /* 1st image */
+  .image-container img:nth-child(3) { /* 3rd image */
+    display: none;
+  }
+}
+
+/* Style for mobile devices */
+@media only screen and (max-width: 768px) {
+    .navbar-brand b {
+    font-size: 27px;
+    padding-left: 10px;
+    color:rgb(179, 106, 94); 
+ 
+}
+
+.navbar-brand p{
+    font-size: 9px;
+    color: #555; 
+    padding-left: 19px;
+}
+
+/* Add some spacing between brand lines */
+.brand-text {
+    line-height: 1.2;
+}
+
+/* Add hover effect */
+.navbar-brand:hover {
+    color: #e91e63;
+}
+
+.navbar-brand:hover b {
+    color: #d81b60; 
+}
+
+.navbar-brand:hover p{
+    color: #333; 
+}
+}
+
+
+   
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <div class="brand-text">
+                <b>Gaonkar's</b><br>
+                <p>Shree Gurudatta Jewellers</p>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto d-flex align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#products">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+            <!-- Close button for mobile view -->
+        </div>
+    </div>
+</nav>
+
+<!-- Carousel Section -->
+<section id="carousel" class="container-fluid ">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-animation="animate__slideInDown">
+                <picture>
+                    <source srcset="1st.jpg" media="(min-width: 1200px)"> <!-- Large screens -->
+                    <source srcset="1st.jpg" media="(min-width: 768px) and (max-width: 991px)"> <!-- Medium screens -->
+                    <source srcset="mobile1.jpg" media="(max-width: 576px)"> <!-- Small screens -->
+                    <img src="1st.jpg" alt="Necklace Collection" class="d-block w-100 ">
+                </picture>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Gold jewellery</h5>
+                    <p>Explore our stunning collection of gold jewellery.</p>
+                </div>
+            </div>
+            <div class="carousel-item " data-animation="animate__slideInUp">
+                <picture>
+                    <source srcset="2nd (1).jpg" media="(min-width: 1200px)">
+                    <source srcset="2nd (1).jpg" media="(min-width: 768px) and (max-width: 991px)">
+                    <source srcset="mobile2.jpg" media="(max-width: 576px)">
+                    <img src="2nd (1).jpg" alt="Ring Collection" class="d-block w-100">
+                </picture>
+                <div class="carousel-caption d-none d-md-block text-dark">
+                    <h5>Elegant Necklaces</h5>
+                    <p>Discover our exquisite range of elegant necklaces.</p>
+                </div>
+            </div>
+            <div class="carousel-item" data-animation="animate__slideInRight">
+                <picture>
+                    <source srcset="3rd.jpg" media="(min-width: 1200px)"> <!-- Large screens -->
+                    <source srcset="3rd.jpg" media="(min-width: 768px) and (max-width: 991px)"> <!-- Medium screens -->
+                    <source srcset="mobile3.jpg" media="(max-width: 576px)"> <!-- Small screens -->
+                    <img src="3rd.jpg" alt="Necklace Collection" class="d-block w-100">
+                </picture>
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Gold Earrings</h5>
+                    <p>Find the perfect pair of Gold earrings to shine.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<section class="other-content"> <!-- Hero Section -->
+    <section id="home" class="hero ">
+        <div class="container ">
+            <h1>Welcome to Jewellery Shop</h1>
+            <p>Your destination for elegant jewellery pieces</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="container ">
+        <h1 class="text-center mb-4">Our Collections</h1>
+        <div class="row">
+           
+            <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
+                <div class="card product-card">
+                    <img src="new.jpg" class="card-img-top" alt="Elegant Necklace">
+                    <div class="card-body">
+                        <h5 class="card-title">Elegant Necklace</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="1"  
+                           data-product-name="Elegant Necklace" 
+                           data-product-price="" 
+                           data-product-img="new.jpg" 
+                           data-product-description="An elegant necklace that complements any outfit.">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-md-4 mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300" >
+                <div class="card product-card">
+                    <img src="ring1.jfif" class="card-img-top" alt="Diamond Ring">
+                    <div class="card-body">
+                        <h5 class="card-title">Diamond Ring</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="2"  
+
+                        data-product-name="Diamond Ring" 
+                        data-product-price="" 
+                        data-product-img="ring1.jfif" 
+                        data-product-description="A stunning diamond ring to make a statement.">
+                         View Details
+                     </a>  </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                <div class="card product-card">
+                    <img src="earrings1.jpg" class="card-img-top" alt="Diamond Earrings">
+                    <div class="card-body">
+                        <h5 class="card-title">Diamond Earrings</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="3"  
+
+                        data-product-name="Diamond Earrings" 
+                        data-product-price="" 
+                        data-product-img="earrings1.jpg" 
+                        data-product-description="An elegant necklace that complements any outfit.">
+                         View Details
+                     </a>                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
+                <div class="card product-card">
+                    <img src="bang.webp" class="card-img-top" alt="bangles">
+                    <div class="card-body">
+                        <h5 class="card-title">bangles</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="4"  
+
+                        data-product-name="bangles" 
+                        data-product-price="" 
+                        data-product-img="bang.webp" 
+                        data-product-description=" Elegant gold bangles that complements any outfit.">
+                         View Details
+                     </a>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300">
+                <div class="card product-card">
+                    <img src="earrings2.webp" class="card-img-top" alt="Elegant Earrings">
+                    <div class="card-body">
+                        <h5 class="card-title">Elegant Earrings</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="5"  
+
+                        data-product-name="Elegant Earrings" 
+                        data-product-price="" 
+                        data-product-img="earrings2.webp" 
+                        data-product-description="An elegant earrings that complements any outfit.">
+                         View Details
+                     </a>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                <div class="card product-card">
+                    <img src="necklace2.jpg" class="card-img-top" alt="Diamond Necklace">
+                    <div class="card-body">
+                        <h5 class="card-title">Diamond Necklace</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="6"  
+
+                        data-product-name="Diamond Necklace" 
+                        data-product-price="" 
+                        data-product-img="necklace2.jpg" 
+                        data-product-description="A Diamond necklace that complements any outfit.">
+                         View Details
+                     </a>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
+                <div class="card product-card">
+                    <img src="simple.png" class="card-img-top" alt="Diamond Necklace">
+                    <div class="card-body">
+                        <h5 class="card-title">Timeless Simple Gold Necklace</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="6"  
+
+                        data-product-name="Timeless Simple Gold Necklace" 
+                        data-product-price="" 
+                        data-product-img="simple.png" 
+                        data-product-description="Crafted from premium 22K, 18K, or 14K gold
+                        Minimalist design with a smooth, polished finish
+                        Adjustable length for a customizable fit
+                        Ideal for everyday wear or as a thoughtful gift.">
+                         View Details
+                     </a>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300">
+                <div class="card product-card">
+                    <img src="medium.png" class="card-img-top" alt="Diamond Necklace">
+                    <div class="card-body">
+                        <h5 class="card-title">Elegant Medium Gold Necklace</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="6"  
+
+                        data-product-name="Elegant Medium Gold Necklace" 
+                        data-product-price="" 
+                        data-product-img="medium.png" 
+                        data-product-description="Made from high-quality 22K, 18K, or 14K gold
+                        Medium length for a flattering fit at the neckline
+                        Sleek, polished finish for a sophisticated look
+                        Adjustable length for personalized comfort.">
+                         View Details
+                     </a>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                <div class="card product-card">
+                    <img src="cusnecklace.png" class="card-img-top" alt="Diamond Necklace">
+                    <div class="card-body">
+                        <h5 class="card-title">Customizable Gold Neckpiece</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="6"  
+
+                        data-product-name="Customizable Gold Neckpiece" 
+                        data-product-price="" 
+                        data-product-img="cusnecklace.png" 
+                        data-product-description="Made from high-quality 22K, 18K, or 14K gold
+                        Fully customizable with a range of chain styles and pendant options
+                        Smooth, polished finish for a refined look
+                        Adjustable length for a perfect fit.">
+                         View Details
+                     </a>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
+                <div class="card product-card">
+                    <img src="ranecklace.png" class="card-img-top" alt="Diamond Necklace">
+                    <div class="card-body">
+                        <h5 class="card-title">Radiant Gold Necklace</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="6"  
+
+                        data-product-name="Radiant Gold Necklace" 
+                        data-product-price="" 
+                        data-product-img="ranecklace.png" 
+                        data-product-description="Crafted from premium 22K, 18K, or 14K gold
+                        Classic design with a smooth, polished finish
+                        Adjustable length for a customizable fit
+                        Suitable for both casual and formal wear.">
+                         View Details
+                     </a>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300">
+                <div class="card product-card">
+                    <img src="gbangles.png" class="card-img-top" alt="Diamond Necklace">
+                    <div class="card-body">
+                        <h5 class="card-title">Elegant Gold Bangles</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="6"  
+
+                        data-product-name="Elegant Gold Bangles" 
+                        data-product-price="" 
+                        data-product-img="gbangles.png" 
+                        data-product-description="Crafted from premium 22K or 18K gold.
+                        Available in various designs, including smooth, textured, and embellished styles
+                        Adjustable sizes to ensure a perfect fit
+                        Classic and contemporary designs suitable for all occasions.">
+                         View Details
+                     </a>                    
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                <div class="card product-card">
+                    <img src="chain.png" class="card-img-top" alt="Diamond Necklace">
+                    <div class="card-body">
+                        <h5 class="card-title">Luxurious Gold Chain</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn text-white" data-bs-toggle="modal" data-bs-target="#productModal" 
+                        data-product-id="6"  
+
+                        data-product-name="Luxurious Gold Chain" 
+                        data-product-price="" 
+                        data-product-img="chain.png" 
+                        data-product-description="Available in 22K, 18K, and 14K gold
+                        Diverse styles including cable, curb, and rope chains
+                        Adjustable lengths to suit your neckline
+                        Ideal for layering or wearing solo.">
+                         View Details
+                     </a>                    
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat other product cards similarly, updating the data-product attributes accordingly -->
+        </div>
+    </section>
+
+    <!-- About Section with Parallax Effect -->
+<section id="home" class="hero2 ">
+    <div class="container">
+      <h1>About US</h1>
+      <p></p>
+    </div>
+  </section>
+  
+  <!-- Parallax About Section -->
+  <section id="about" class="parallax-container ">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6" data-aos="flip-up" data-aos-duration="1500">
+          <h2 class="text-center mb-4" style="color: rgb(248, 245, 245);"><b></b></h2>
+          <p><b>G</b>aonkars Shree Gurudatta Jeweller, established on December 31, 1983, has been a cherished name in the jewelry industry for over four decades. Renowned for its exquisite craftsmanship and timeless designs, this esteemed establishment has built a reputation for quality and reliability. Combining traditional artistry with modern techniques, Gaonkars Shree Gurudatta Jeweller offers a wide range of elegant jewelry, from classic to contemporary, catering to diverse tastes and occasions. Their commitment to excellence and customer satisfaction has made them a trusted destination for those seeking exceptional and meaningful adornments.</p>
+          <h2 class="text-center mb-4" style="color: rgb(253, 250, 249);"><b>Our Craftsmanship</b></h3>
+      <p>Our jewelry is created with the utmost care and precision. We source only the finest materials, including ethically mined gemstones and high-quality metals, to ensure that each piece is not only beautiful but also sustainable.</p>
+      <h2 class="text-center mb-4" style="color: rgb(253, 249, 248);"><b>Our Promise</b></h3>
+      <p>Customer satisfaction is at the heart of everything we do. From the moment you enter our store or visit our website, we strive to provide an exceptional shopping experience. Our knowledgeable staff is here to assist you with personalized service, whether you're selecting a piece for a special occasion or simply indulging in a treat for yourself.</p>
+      <p>We invite you to explore our collections and discover the perfect piece that speaks to you.</p>
+        </div>
+        <div class="col-md-6 text-center" data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000">
+          <div class="image-container">
+            <img src="mobile1.jpg" alt="Image 1" class="overlap-img">
+            <img src="mobile2.jpg" alt="Image 2" class="overlap-img">
+            <img src="mobile3.jpg" alt="Image 3" class="overlap-img">
+          </div>
+        </div>
+      </div>
+  
+      
+    </div>
+  </section>
+  
+   <!-- Contact Section -->
+<section id="contact" class="container my-5" data-aos="fade-up" data-aos-duration="1500">
+    <h2 class="text-center mb-4" style="color: rgb(139, 109, 106);">Contact Us</h2>
+    <form action="contact.php" method="POST">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn text-white"  style="background-color: rgb(179, 106, 94);" >Send Message</button>
+    </form>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-5">
+        <p>&copy; All rights reserved.</p>
+    </footer>
+</section>
+
+    <!-- Modal -->
+   <!-- Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="productModalLabel">Product Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="modalProductImage" class="text-center mb-3">
+            <img src="" id="modalProductImg" class="img-fluid" alt="Product Image">
+          </div>
+          <h5 id="modalProductName"></h5>
+          <p id="modalProductPrice"></p>
+          <p id="modalProductDescription"></p>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+     <!-- Scroll to Top Button -->
+     <button onclick="scrollToTop()" class="scroll-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+   
+
+    <script>
+
+          // Scroll to Top Function
+         function scrollToTop() {
+           window.scrollTo({ top: 0, behavior: 'smooth' });
+         }
+
+        // Show or hide the scroll-to-top button
+        window.onscroll = function() {
+         const scrollBtn = document.querySelector('.scroll-to-top');
+             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+             scrollBtn.style.display = 'block';
+             } else {
+                 scrollBtn.style.display = 'none';
+             }
+         }; 
+        
+       document.addEventListener('DOMContentLoaded', function () {
+    var productModal = document.getElementById('productModal');
+    var cart = [];
+    var cartDropdown = document.querySelector('#cartDropdown + .dropdown-menu');
+    var quantityElement = document.getElementById('quantity');
+    var quantity = 1;
+
+    productModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+        var productName = button.getAttribute('data-product-name');
+        var productPrice = button.getAttribute('data-product-price');
+        var productImg = button.getAttribute('data-product-img');
+        var productDescription = button.getAttribute('data-product-description');
+        var productId = button.getAttribute('data-product-id');
+
+        var modalTitle = productModal.querySelector('.modal-title');
+        var modalImg = productModal.querySelector('#modalProductImg');
+        var modalProductName = productModal.querySelector('#modalProductName');
+        var modalProductPrice = productModal.querySelector('#modalProductPrice');
+        var modalProductDescription = productModal.querySelector('#modalProductDescription');
+
+        modalTitle.textContent = productName;
+        modalImg.src = productImg;
+        modalProductName.textContent = productName;
+        modalProductPrice.textContent = productPrice;
+        modalProductDescription.textContent = productDescription;
+
+      
+    });
+
+    
+    
+
+   
+
+   
+});
+
+
+
+    
+      // Apply animation based on data-animation attribute
+      const carousel = document.getElementById('carouselExampleCaptions');
+    
+    carousel.addEventListener('slide.bs.carousel', function (event) {
+        const activeItem = event.relatedTarget; // The next item to be shown
+        const animationName = activeItem.getAttribute('data-animation');
+        activeItem.querySelector('img').classList.add('animate__animated', animationName);
+    });
+
+    carousel.addEventListener('slid.bs.carousel', function (event) {
+        const activeItem = event.relatedTarget; // The newly active item
+        const animationName = activeItem.getAttribute('data-animation');
+
+        // Ensure the animation is removed after it's done
+        setTimeout(() => {
+            activeItem.querySelector('img').classList.remove('animate__animated', animationName);
+        }, 1000); // Duration of the animation in ms (match this with your actual animation duration)
+    });
+
+
+
+    AOS.init();
+    </script>
+
+
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyDYA7cVQPeOM-gtHEsQalwd-AgoSN_ZCnU",
+      authDomain: "shop-f1c49.firebaseapp.com",
+      projectId: "shop-f1c49",
+      storageBucket: "shop-f1c49.firebasestorage.app",
+      messagingSenderId: "985612875973",
+      appId: "1:985612875973:web:9a58564162a1738c9018ac",
+      measurementId: "G-ML8GJNM5G3"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script>
+
+</body>
+</html>

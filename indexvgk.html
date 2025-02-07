@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <!-- <title>vgk</title> -->
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/loggoo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <!-- Include Animate.css for animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <!-- AOS CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+   <!-- AOS JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+
+
+  <!-- =======================================================
+  * Template Name: Siimple
+  * Template URL: https://bootstrapmade.com/free-bootstrap-landing-page/
+  * Updated: Aug 07 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+/* Ensure the row is a flex container */
+
+
+  /* Prevent horizontal scrolling */
+  body, html {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+.row-height {
+  display: flex;
+  align-items: stretch; /* Stretch items to match height */
+  flex-wrap: nowrap; /* Prevent wrapping to force side-by-side */
+}
+
+/* Remove padding on the right side */
+.pr0 {
+  padding-right: 0;
+  margin: 0;
+}
+
+/* Style for columns */
+.col-custom {
+
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  flex-basis: 0;
+  flex-grow: 1; /* Allow columns to grow and take space */
+  flex-shrink: 0; /* Prevent columns from shrinking */
+}
+
+/* Image container adjustments */
+.img-box {
+  width: 600px; /* Fixed width for the image container */
+  height: 400px; /* Fixed height for the image container */
+  display: flex;
+  flex-shrink: 0; /* Prevent the image container from shrinking */
+  justify-content: center; /* Center image horizontally */
+  align-items: center; /* Center image vertically */
+}
+
+/* Ensure image covers the container without overflow */
+.img-box img {
+  width: 100%; /* Fill the img-box container */
+  height: 100%; /* Fill the img-box container */
+  object-fit: cover;
+}
+
+/* About text adjustments to fit */
+#about-text {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1; /* Allow the text container to take up remaining space */
+  height: 100%; /* Make sure the text container fills the column height */
+}
+/* Responsive image styles */
+.img-fluid {
+    max-width: 100%; /* Ensure images do not exceed their container */
+    height: auto; /* Maintain aspect ratio */
+}.overlay {
+    position: absolute;
+    top: 50%; /* Centers vertically */
+    left: 5%; /* Aligns content to the left */
+    transform: translateY(-50%);
+    color: #000000;
+    text-align: left; /* Aligns text to the left */
+}
+
+.overlay h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.overlay p {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+.size-2 {
+  padding: 15px; /* Optional padding for text */
+}
+/* Ensure the container and row fill the full height */
+.call-to-action-area {
+  display: flex; /* Use Flexbox to align items */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-align: center; /* Ensure text is centered */
+  height: 100vh; /* Make the section fill the viewport height */
+  background-attachment: fixed; /* Parallax effect */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+  position: relative;
+}
+
+.bg-overlay-black::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Black overlay with opacity */
+  z-index: 1; /* Position overlay behind content */
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2; /* Position content above overlay */
+}
+
+
+.text-1{
+  position: absolute;
+    top:30%; /* Centers vertically */
+    left: 5%; /* Aligns content to the left */
+    transform: translateY(-40%);
+   
+    text-align: left; /* Aligns text to the left */
+}
+
+
+
+/* Responsive styles */
+@media (max-width: 567px) {
+     .text-1 {
+        font-size: 40px !important; 
+        letter-spacing: 5px !important; 
+    }
+}
+
+
+
+
+.footer-menu-links-wrap .footer-link i {
+  opacity: 0; /* Make the arrow invisible */
+  transition: opacity 0.3s ease-in-out; /* Smooth transition for visibility */
+}
+
+.footer-menu-links-wrap .footer-link:hover i {
+  opacity: 1; /* Show the arrow on hover */
+}
+.gap-left {
+padding-left: 15%;
+}
+
+
+
+@media (max-width: 567px) {
+
+
+}
+
+/* .pro{
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+
+  padding: 5px 20px;
+  background: linear-gradient(to right, rgb(210, 212, 214), white);
+  border-radius: 5px;
+
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+} */
+
+
+
+
+ </style>
+</head>
+
+<body class="index-page">
+
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h3 class="sitename" style="text-shadow: 1px 1px 3px rgb(0, 0, 0); color: #ffffff;"     data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="800"> 
+          <img src="assets/img/loggoo.png" alt="Infra Ventures Logo" style="height: 50px;">
+          Infra Ventures
+        </h3>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          
+          <li><a href="#services">Projects</a></li>
+          <li><a href="#why">Our Expertise</a></li>
+           <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a> 
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>  -->
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <img src="assets/img/Untitled design (6).jpg" alt=""  class="helly"   data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="800">
+
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <p class="text-1" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="500" style="font-size: 70px;text-shadow: 2px 2px 5px rgb(255, 255, 255); letter-spacing: 5px;  font-family:Allerta Stencil,Sans-serif;color: #000000;">CREATING<br> LANDMARKS</p>
+            <!-- <p>We are team of talented designers making websites with Bootstrap</p>
+            <a href="#about" class="btn-get-started">Get Started</a> -->
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- About Section -->
+    <section id="about" class="about section"  style="background-image: url(assets/img/round.png);">
+
+      <!-- Section Title -->
+      <div class="container section-title">
+        <!-- <p>-who are we</p> -->
+        <h2 class="styled-heading" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="800" id="aboutUsHeading" style="text-shadow: 1px 1px 2px rgb(0, 0, 0);color:#be946a;font-size: 50px;">About Us</h2>
+        <h3 class="heading0"  data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="800">Transforming landscapes and building communities.</h3>
+      </div><!-- End Section Title -->
+
+      <div class="container" >
+
+        <div class="row gy-4">
+          <div class="col-lg-6">
+            <img src="assets/img/about.jpg" class="img-fluid" alt="" style="height: 450px;"    data-aos="fade-down" data-aos-duration="1200" data-aos-delay="800">
+          </div>
+          <div class="col-lg-6 content"  data-aos="fade-up" data-aos-duration="1200" data-aos-delay="900">
+           
+            <p class="fst-italic">
+              <p>
+                At VGK Infra Ventures, we are committed to creating world-class real estate properties that reflect our core values of quality, innovation, and sustainability. Our portfolio continues to grow, reflecting our mission to build better spaces for communities and deliver the highest value for our stakeholders.
+            </p>
+           <!-- <p>
+                 With each project, we aspire to enhance urban landscapes, contribute to the city's development, and set new standards in real estate excellence.
+            </p> -->
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-all"  style="color: #c0966b;"></i> <span> With each project, we aspire to enhance urban landscapes</span></li>
+              <li><i class="bi bi-check2-all"  style="color: #c0966b;"></i> <span>contribute to the city's development</span></li>
+              <li><i class="bi bi-check2-all"  style="color: #c0966b;"></i> <span> and set new standards in real estate excellence.</span></li>
+            </ul>
+            <p>
+              Our team of experienced professionals and our passion for excellence drive every project we undertake. As we expand our reach in Belagavi and beyond, we remain dedicated to building a legacy of trust, quality, and value that will endure for generations.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    
+    <section id="services" class="services section light-background">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="700" >
+        <h2 class="pro" style="text-shadow: 1px 1px 2px rgb(0, 0, 0);color:#c0966b;font-size: 50px;">Projects</h2>
+      </div>
+    
+      <!-- Apartment Section -->
+      <div class="container my-5">
+        <div class="row align-items-center">
+          <!-- Image Section (appears first on mobile) -->
+          <div class="col-md-6 order-1 order-md-2 d-flex justify-content-center" data-aos="zoom-in-up" data-aos-duration="1200" data-aos-delay="700">
+            <img src="assets/img/apart1.jpg" alt="Lotus Temple Image" class="img-fluid" style="max-height: 500px; max-width: 100%;">
+          </div>
+          <!-- Text Section -->
+          <div class="col-md-6 order-2 order-md-1" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="800" style="color: #292f36; padding: 10px;text-indent: 1px;letter-spacing: 3px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;text-align: justify;">
+            <h2 class="headings">Apartment</h2>
+            <p class="mb-4">
+              Apartment and Homes: At VGK Infra Ventures LLP, we specialize in crafting high-quality residential spaces that redefine modern living. Our apartments and homes combine contemporary architecture, cutting-edge amenities, and sustainable practices to create vibrant communities. Each project is tailored to cater to the diverse needs of families, offering comfort, style, and functionality. Whether it's luxury apartments or affordable housing, we ensure every project exceeds expectations, providing a place that you’ll be proud to call home.
+            </p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Layout Development Section -->
+      <section class="mt-4" style="background-color: #faf5f0;">
+        <div class="container my-5">
+          <div class="row align-items-center">
+            <!-- Image Section (appears first on mobile) -->
+            <div class="col-md-6 order-1 order-md-1 d-flex justify-content-center" data-aos="zoom-in-up" data-aos-duration="1700" data-aos-delay="700">
+              <img src="assets/img/layt1.jpg" alt="Home Construction Image" class="img-fluid" style="max-height: 500px; max-width: 100%;">
+            </div>
+            <!-- Text Section -->
+            <div class="col-md-6 order-2 order-md-2" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="800" style="color: #292f36;text-align:justify;letter-spacing: 3px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+              <h2 class="headings">Layout Development</h2>
+              <p class="mb-4">
+                Layouts and Land Development Shaping Tomorrow’s Urban Landscapes VGK Infra Ventures LLP excels in land development, designing well-planned layouts that integrate urban convenience with natural harmony. Our layout projects are characterized by meticulous planning, thoughtful zoning, and robust infrastructure. We strive to create environments that foster growth, whether for residential, commercial, or mixed-use purposes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Public Infrastructure Section -->
+      <div class="container my-5">
+        <div class="row align-items-center">
+          <!-- Image Section (appears first on mobile) -->
+          <div class="col-md-6 order-1 order-md-2 d-flex justify-content-center" data-aos="zoom-in-up" data-aos-duration="1700" data-aos-delay="700">
+            <img src="assets/img/infra.jpg" alt="Lotus Temple Image" class="img-fluid" style="max-height: 500px; max-width: 100%;">
+          </div>
+          <!-- Text Section -->
+          <div class="col-md-6 order-2 order-md-1" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="800" style="color: #292f36;text-align:justify;letter-spacing: 3px;font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+            <h2 class="headings">Public Infrastructure</h2>
+            <p class="mb-4">
+              Our expertise in public infrastructure development reflects our commitment to driving societal progress. From roads and bridges to schools and healthcare centers, we construct infrastructure that enhances connectivity and improves quality of life. Our projects prioritize durability, functionality, and environmental consciousness, ensuring a lasting impact on the communities we serve.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+
+<section class="call-to-action-area bg-fixed bg-overlay-black" id="why" style="background-image: url('assets/img/apart3.jpg');">
+  <div class="container h-100"  data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
+    <div class="row align-items-center h-100">
+      <div class="col-12">
+        <div class="cta-content text-center">
+          <h2 class="wow fadeInUp" data-wow-delay="300ms"  style="color: white;font-size: 40px;">Our Expertise</h2>
+          <h6 class="wow fadeInUp" data-wow-delay="400ms"  style="color: #faf5f0;text-indent: 1px;">
+            
+
+            
+              <i class="bi bi-check2-all"  style="color: #c0966b;"></i><span>Innovative designs with optimized living spaces</span><br>
+                <i class="bi bi-check2-all"  style="color: #c0966b;"> </i><span>Eco-friendly construction techniques</span><br>
+                  <i class="bi bi-check2-all"  style="color: #c0966b;"> </i><span>Prime locations with excellent connectivity</span><br>
+                    <i class="bi bi-check2-all"  style="color: #c0966b;"></i><span> Comprehensive facilities, including landscaped gardens, parking, and security</span><br>
+                      <i class="bi bi-check2-all"  style="color: #c0966b;"></i><span> Focused on creating inclusive and family-friendly communitiesState-of-the-art engineering solutions</span><br>
+                        <i class="bi bi-check2-all"  style="color: #c0966b;"></i><span>Focus on sustainable and resilient designs</span><br>
+                          <i class="bi bi-check2-all"  style="color: #c0966b;"></i><span>Adherence to strict safety and quality standards</span><br>
+                            <i class="bi bi-check2-all"  style="color: #c0966b;"></i><span>Timely delivery of projects with optimized resources</span><br>
+                              <i class="bi bi-check2-all"  style="color: #c0966b;"></i><span>Supporting urbanization and rural development initiatives</span></h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section" style="background-image: url(assets/img/round.png);" >
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="contacty" style="color: #c0966b;text-shadow: 1px 1px 2px rgb(0, 0, 0);font-size: 50px;">Contact Us</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p class="test" style="text-align: center;">PLOT NO 465, CTS NO. 8893, SHOP NO. 2, AND 3,<br>Shivabasava Nagar, Belagavi.</p>
+            
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center info-item-borders">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+91-9148291111</p>
+            </div>
+          </div><!-- End Info Item -->
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex flex-column justify-content-center align-items-center">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>vgkinfraventuresllp@gmail.com</p>
+            </div>
+          </div><!-- End Info Item -->
+
+        </div>
+  
+
+        <form action="send_email.php" method="POST" class="php-email-form" data-aos="fade-up" data-aos-delay="300" style="background-color: white;">
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required="">
+            </div>
+
+            <div class="col-md-6 ">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="">
+            </div>
+
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required="">
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" name="message" id="message" rows="6" placeholder="Message" required=""></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit">Send Message</button>
+            </div>
+
+          </div>
+        </form><!-- End Contact Form -->
+
+      </div>
+
+    </section><!-- /Contact Section -->
+    <div class="map-container" style="width: 100%; height: 450px;">
+      <!-- Google Maps Embed -->
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d102493.31642079355!2d74.44022030241857!3d15.882683802980894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3bbf616617dbc4cf%3A0xb926f4e3c3a16f02!2sopp.%20%3A%20KPTCL%20Samudhaya%20Bhavan%2C%20Shivabasava%20Nagar%2C%20Nehru%20Nagar%2C%20Belagavi%2C%20Karnataka%20590010!3m2!1d15.8826994!2d74.52262209999999!5e1!3m2!1sen!2sin!4v1732770617925!5m2!1sen!2sin" 
+        style="width: 100%; height: 100%; border: 0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+    
+  </main>
+
+  <footer id="footer" class="footer light-background">
+    <div class="container">
+      <!-- Logo & Intro -->
+   
+  
+      <!-- Explore & Contact -->
+      <div class="row mt-4 justify-content-between" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="800">
+        <!-- Explore Section -->
+               <!-- Logo & Intro -->
+               <div class="col-lg-3 col-md-4 mt-4 footer-logo-wrap" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="800">
+  <a href="/" aria-current="page" class="footer-logo-link">
+    <img src="assets/img/loggoo.png" alt="Interno Logo" style="height: 40px; text-decoration: none;">
+    <span class="footer-brand" style="color:#000000; font-size: 25px;">Infra Ventures</span>
+  </a>
+  <div class="social-links d-flex justify-content-center mt-4">
+    <a href=""><i class="bi bi-twitter-x"></i></a>
+    <a href=""><i class="bi bi-facebook"></i></a>
+    <a href=""><i class="bi bi-instagram"></i></a>
+    <a href=""><i class="bi bi-skype"></i></a>
+    <a href=""><i class="bi bi-linkedin"></i></a>
+  </div>
+</div>
+<div class="col-lg-5 col-md-6 mb-4 footer-links gap-left" style="text-align: left;">
+  <h2 class="footer-widget-title">Explore</h2>
+  <div class="footer-menu-links-wrap">
+    <a href="#hero" class="footer-link d-block" style="color:#64370d; font-size: 18px;">
+      <i class="fas fa-arrow-right" style="color:#000000;"></i> Home
+    </a>
+    <a href="#about" class="footer-link d-block" style="color:#64370d; font-size: 18px;">
+      <i class="fas fa-arrow-right" style="color:#000000;"></i> About Us
+    </a>
+    <a href="#services" class="footer-link d-block" style="color:#64370d; font-size: 18px;">
+      <i class="fas fa-arrow-right" style="color:#000000;"></i> Projects
+    </a>
+    <a href="#why" class="footer-link d-block" style="color:#64370d; font-size: 18px;">
+      <i class="fas fa-arrow-right" style="color:#000000;"></i> Our Expertise
+    </a>
+    <a href="#contact" class="footer-link d-block" style="color:#64370d; font-size: 18px;">
+      <i class="fas fa-arrow-right" style="color:#000000;"></i> Contact Us
+    </a>
+  </div>
+</div>
+
+
+              
+  
+        <!-- Contact Section -->
+        <div class="col-lg-4 col-md-6 mb-4 footer-contact">
+          <h2 class="footer-widget-title">Contact</h2>
+          <div class="footer-address-wrap">
+            <p class="footer-address"  style="color:#000000;">PLOT NO 465, CTS NO. 8893, SHOP NO. 2, AND 3,<br>Shivabasava Nagar, Belagavi,<br>Karnataka, 590010<br>Karnataka, India</p>
+            <a href="mailto:vgkinfraventuresllp@gmail.com" class="footer-link d-block"  style="color:#000000;">vgkinfraventuresllp@gmail.com</a>
+            <a href="tel:+918296509630" class="footer-link d-block"  style="color:#000000;">+91-9148291111</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Copyright Section -->
+      <div class="container">
+        <div class="copyright">
+          <p>Copyright © dharwadhubballitutor | Designed by dharwadhubballitutor</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" style="background-color: #c0966b;"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+
+  <script>
+
+
+
+
+    AOS.init();
+  </script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <!-- Include WOW.js for scroll-triggered animations (if needed) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
