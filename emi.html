@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .calculator {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        #result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>EMI Calculator</h2>
+        <label for="loanAmount">Loan Amount:</label>
+        <input type="number" id="loanAmount" placeholder="Enter amount" required>
+        
+        <label for="interestRate">Annual Interest Rate (%):</label>
+        <input type="number" id="interestRate" placeholder="Enter rate" required>
+        
+        <label for="loanTenure">Loan Tenure (months):</label>
+        <input type="number" id="loanTenure" placeholder="Enter months" required>
+        
+        <button onclick="calculateEMI()">Calculate EMI</button>
+        
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateEMI() {
+            let principal = document.getElementById("loanAmount").value;
+            let annualRate = document.getElementById("interestRate").value;
+            let tenure = document.getElementById("loanTenure").value;
+            
+            let monthlyRate = (annualRate / 12) / 100;
+            let emi = (principal * monthlyRate * Math.pow(1 + monthlyRate, tenure)) / (Math.pow(1 + monthlyRate, tenure) - 1);
+            
+            if (isNaN(emi) || emi <= 0) {
+                document.getElementById("result").innerText = "Please enter valid inputs.";
+            } else {
+                document.getElementById("result").innerText = `Your EMI is ₹${emi.toFixed(2)}`;
+            }
+        }
+    </script>
+</body>
+</html>

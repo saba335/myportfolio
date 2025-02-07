@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel="stylesheet">
+
+<style>
+    *{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+:root{
+    --text-color:white;
+    --hover-color:#12f7ff;
+    --bg-color:black;
+    --secon-bg-color:#292e33;
+    --bg-font:2.5rem;
+    --normal-font:2rem;
+    --neon-box-shadow:0 0 .5rem #12f7ff;
+    --h2-font:3rem;
+    --font-neon-text-shadow:0 0 10px rgba(18,247,255,0.3),
+    0 0 20px rgba(18,247,255,0.3),
+    0 0 30px rgba(18,247,255,0.3),
+    0 0 40px rgba(18,247,255,0.3),
+    0 0 70px rgba(18,247,255,0.3),
+    0 0 80px rgba(18,247,255,0.3),
+    0 0 100px rgba(18,247,255,0.3),
+    0 0 150px rgba(18,247,255,0.3);
+}
+
+::-webkit-scrollbar{
+    height: 0;
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--secon-bg-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--hover-color);
+    border-radius: 5rem;
+}
+body{
+    font-family: "poppins",sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);  
+}
+section{
+    padding: 100px 10%;
+}
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1000;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding :20px 10%;
+}
+
+header.sticky{
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--secon-bg-color);
+    padding: 12px 10%;
+}
+
+.logo{
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+span{
+    color: var(--hover-color);
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    display: inline-block;
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 20px;
+    animation: slideAnimation 1s ease forwards ;
+    animation-delay: calc(.3s * var(--i));
+    opacity: 0;
+}
+
+.navlist a:hover{
+    color: var(--hover-color);
+    text-shadow: 0 0 10px rgba(18,247,255,0.6),
+    0 0 20px rgba(18,247,255,0.6),
+    0 0 30px rgba(18,247,255,0.6),
+    0 0 40px rgba(18,247,255,0.6),
+    0 0 70px rgba(18,247,255,0.6),
+    0 0 80px rgba(18,247,255,0.6),
+    0 0 100px rgba(18,247,255,0.6),
+    0 0 150px rgba(18,247,255,0.6); 
+}
+
+.navlist a.active{
+    color:var(--hover-color);
+}
+
+#menu-icon{
+    font-size: 1.8rem;
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    background: var(--hover-color);
+    border-radius: 3px;
+    color: var(--secon-bg-color);
+    display: none;
+}
+
+
+.home{
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-gap: 4em;
+}
+
+.home-content{
+    max-width: 600px;
+
+}
+
+.home-content  h1{
+    font-size: var(--bg-font);
+    font-weight: 600;
+}
+
+.change-text h3{
+    display: inline-flex;
+    margin:0;
+    vertical-align: top;
+}
+
+.change-text h3 .word{
+    position: absolute;
+    display: flex;
+    opacity: 0;
+}
+
+.change-text h3 .word .letter{
+    transform-origin: center center 25px;
+}
+
+.change-text h3 .word .letter.out{
+    transform: rotateX(90deg);
+    transition: 0.32s cubic-bezier(0.6,0,0.7,0.2);
+}
+
+.change-text h3 .word .letter.in{
+    transition: 0.38s ease;
+}
+
+.change-text h3 .word .letter.behind{
+    transform: rotateX(-90deg);
+}
+
+.change-text .word {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.change-text {
+    position: relative;
+    display: inline-block;
+}
+
+.home-content p{
+    color:white;
+    line-height: 1.6;
+}
+
+.info-box{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 300px;
+    margin: 1rem 0 2rem;
+}
+
+.info-box h5{
+    font-weight: 600;
+    color:var(--text-color);
+    font-size: 1rem;
+}
+
+.info-box{
+    font-size: .9rem;
+    color: white;
+}
+
+
+.info-item {
+    display: flex;
+    margin-bottom: 10px; /* Adjust spacing as needed */
+}
+
+.info-item h3 {
+    margin-right: 20px; /* Space between the h3 and p */
+    white-space: nowrap; /* Prevent line breaks in the label */
+}
+
+.info-item p {
+    margin: 2%; /* Remove default margin to align properly */
+}
+
+.mySlides {display: none;}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 320px;
+    height: 45px;
+}
+
+.btn-box .btn{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: var(--hover-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .6s;
+    box-shadow: var(--neon-box-shadow);
+    border-radius: 5px;
+    position: relative;overflow: hidden;
+    z-index: 1;
+    border: 2px solid var(--hover-color);
+}
+
+.btn:hover{
+    color: var(--hover-color);
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--bg-color);
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+}
+
+.btn:hover::before{
+    width: 100%;
+
+}
+
+.btn:nth-child(2){
+   background: var(--bg-color);
+   color: var(--hover-color); 
+}
+
+.btn:nth-child(2):hover{
+    color: var(--bg-color);
+}
+
+.btn:nth-child(2)::before{
+    background: var(--hover-color);
+}
+
+.social-icons{
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+    height: 40px;
+}
+
+
+.social-icons a{
+    display: inline-flex;
+    width: 50px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    color: var(--hover-color);
+    border: 2px solid var(--hover-color);
+    transition: .6s;
+    box-shadow: 0 0 0.3rem #12f7ff;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.social-icons a i{
+    font-size: 1.5rem;
+}
+
+.social-icons a:hover{
+    color: var(--bg-color);
+}
+
+.social-icons a::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: var(--hover-color);
+    transition: .6s;
+    z-index: -1;
+}
+
+.social-icons a:hover::before{
+    width: 100%;
+}
+
+.home-image{
+    position: relative;
+}
+
+
+.img-box{
+    text-align: center;
+}
+
+.img-box img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+.home-image img{
+    width:600px;
+}
+
+.liquid-shape{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 10%;
+}
+
+.liquid-shape:nth-child(2){
+    filter: blur(50px);
+}
+
+</style>
+</head>
+<body>
+
+
+    <header>
+        <div class="logo"><span>S</span>aba.</div>
+        <ul class="navlist">
+            <li><a href="#home" style="--i:1;">Home</a></li>
+            <li><a href="#about" style="--i:2;">About</a></li>
+            <li><a href="#services" style="--i:3;">Services</a></li>
+            <li><a href="resume.html"  style="--i:4;">Resume</a></li>
+            <li><a href="#portfolio" style="--i:5;">Portfolio</a></li>
+            <li><a href="#contact" style="--i:6;">Contact</a></li>
+        </ul>
+        <div id="menu-icon" class="bx bx-menu"></div>
+    </header>
+
+<div class="mySlides fade">
+  
+    <section id="home" class="home">
+        <div class="home-content scroll-scale">
+<h1>Hi! I'm Saba Tahsildar</h1>
+<div class="change-text">
+    <h3>And I'm</h3>
+    <h3>
+        <span class="word">Youtuber</span>
+        <span class="word">Web Developer</span>
+    </h3>
+</div><br>
+
+
+
+<div class="info-box">
+    <div class="email-info">
+        <h5>Email :</h5>
+        <span>sabatahsildar@gmail.com</span>
+    </div>
+    <div class="behance-info">
+        <h5>Behance :</h5>
+        <span>sabatahsildar@gmail.com</span>
+    </div>
+</div>
+
+<div class="btn-box">
+    <a href="#" class="btn">Download CV</a>
+    <a href="#" class="btn">Hire Me Now!</a>
+</div>
+
+<div class="social-icons">
+    <a href="#"><i class='bx bxl-facebook'></i></a>
+    <a href="#"><i class='bx bxl-instagram'></i></a>
+    <a href="#"><i class='bx bxl-twitter'></i></a>
+    <a href="#"><i class='bx bxl-dribble'></i></a>
+</div>
+</div>
+
+        <div class="home-image scroll-scale">
+            <div class="img-box">
+                <img src="abi1.png" alt="">
+            </div>
+
+            <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80%" id="blobSvg">
+                    <path  fill="#12f7ff">
+                        <animate attributeName="d"
+                        dur="20000ms"
+                        repeatCount="indefinite"
+                        values="M437.5,307Q448,364,400,395.5Q352,427,301,454Q250,481,194.5,461.5Q139,442,97,402Q55,362,32.5,306Q10,250,55.5,207Q101,164,117,106Q133,48,191.5,65Q250,82,298.5,82Q347,82,400.5,107Q454,132,440.5,191Q427,250,437.5,307Z;
+                        
+                        M435,289.5Q387,329,361.5,363.5Q336,398,293,435.5Q250,473,190.5,464Q131,455,121,392.5Q111,330,89,290Q67,250,70,199Q73,148,117.5,123Q162,98,206,97Q250,96,294,96.5Q338,97,382,123Q426,149,454.5,199.5Q483,250,435,289.5Z;                        
+                        M455,296.5Q411,343,374.5,373Q338,403,294,414Q250,425,198.5,426.5Q147,428,108,391Q69,354,77.5,302Q86,250,90,205Q94,160,116,108Q138,56,194,50Q250,44,292,74.5Q334,105,382.5,125Q431,145,465,197.5Q499,250,455,296.5Z;                        
+                        M459.5,302Q429,354,394,396Q359,438,304.5,462.5Q250,487,196.5,461Q143,435,123,385Q103,335,68.5,292.5Q34,250,41,191.5Q48,133,96.5,100Q145,67,197.5,36.5Q250,6,289,60.5Q328,115,358,142.5Q388,170,439,210Q490,250,459.5,302Z;
+                        M447,293.5Q400,337,371.5,374.5Q343,412,296.5,444Q250,476,199.5,450.5Q149,425,94.5,398Q40,371,41,310.5Q42,250,75.5,209.5Q109,169,129,121.5Q149,74,199.5,63.5Q250,53,300.5,64Q351,75,390.5,110.5Q430,146,462,198Q494,250,447,293.5Z;
+                        M424.5,302Q430,354,393.5,394.5Q357,435,303.5,434.5Q250,434,207.5,415.5Q165,397,119,374.5Q73,352,40.5,301Q8,250,28.5,192Q49,134,104,113.5Q159,93,204.5,94Q250,95,294.5,95.5Q339,96,401.5,111.5Q464,127,441.5,188.5Q419,250,424.5,302Z;
+                        M424.5,303.5Q435,357,388,382.5Q341,408,295.5,442Q250,476,206.5,438.5Q163,401,139,364.5Q115,328,60,289Q5,250,60,211Q115,172,139.5,136Q164,100,207,96Q250,92,289.5,103Q329,114,383,128Q437,142,425.5,196Q414,250,424.5,303.5Z;"></animate>
+                    </path>
+                  </svg>
+            </div>
+            
+            <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80%" id="blobSvg">
+                    <path  fill="#12f7ff">
+                        <animate attributeName="d"
+                        dur="10000ms"
+                        repeatCount="indefinite"
+                        values="M418.5,318.5Q387,387,318.5,403.5Q250,420,184,401Q118,382,74.5,316Q31,250,58,167.5Q85,85,167.5,55Q250,25,303.5,84Q357,143,403.5,196.5Q450,250,418.5,318.5Z;
+                        
+                        M448,332.5Q415,415,332.5,452.5Q250,490,179.5,440.5Q109,391,64.5,320.5Q20,250,56.5,171.5Q93,93,171.5,91.5Q250,90,313.5,106.5Q377,123,429,186.5Q481,250,448,332.5Z;
+                        M421,305.5Q361,361,305.5,411Q250,461,172.5,433Q95,405,67,327.5Q39,250,82,187.5Q125,125,187.5,106Q250,87,327.5,91Q405,95,443,172.5Q481,250,421,305.5Z;
+                        M440.5,332.5Q415,415,332.5,418.5Q250,422,189.5,396.5Q129,371,85.5,310.5Q42,250,79.5,183.5Q117,117,183.5,100.5Q250,84,338,79Q426,74,446,162Q466,250,440.5,332.5Z;
+                        M418.5,332.5Q415,415,332.5,419Q250,423,188.5,398Q127,373,75.5,311.5Q24,250,74.5,187.5Q125,125,187.5,65.5Q250,6,319.5,58.5Q389,111,405.5,180.5Q422,250,418.5,332.5Z;
+                        M393,309.5Q369,369,309.5,409.5Q250,450,191,409Q132,368,66,309Q0,250,70.5,195.5Q141,141,195.5,77Q250,13,326.5,55Q403,97,410,173.5Q417,250,393,309.5Z;
+                        M418.5,318.5Q387,387,318.5,403.5Q250,420,184,401Q118,382,74.5,316Q31,250,58,167.5Q85,85,167.5,55Q250,25,303.5,84Q357,143,403.5,196.5Q450,250,418.5,318.5Z;"></animate>
+                    </path>
+                  </svg>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+<div class="mySlides fade">
+
+    <section id="home" class="home">
+        <div class="home-content scroll-scale">
+
+<p>Hello! I'm Saba, from Dharwad. I'm passionate about my work and actively seeking new opportunities.</p>
+<p>"I develop websites with an eye for detail and a focus on performance. If you're looking for a developer who values both beauty and functionality, let's build something incredible."</p>
+
+<div class="info-box">
+    <div class="email-info">
+        <h5>Email :</h5>
+        <span>sabatahsildar@gmail.com</span>
+    </div>
+    <div class="behance-info">
+        <h5>Behance :</h5>
+        <span>sabatahsildar@gmail.com</span>
+    </div>
+</div>
+
+<div class="btn-box">
+    <a href="#" class="btn">Download CV</a>
+    <a href="#" class="btn">Hire Me Now!</a>
+</div>
+
+<div class="social-icons">
+    <a href="#"><i class='bx bxl-facebook'></i></a>
+    <a href="#"><i class='bx bxl-instagram'></i></a>
+    <a href="#"><i class='bx bxl-twitter'></i></a>
+    <a href="#"><i class='bx bxl-dribble'></i></a>
+</div>
+</div>
+
+        <div class="home-image scroll-scale">
+            <div class="img-box">
+                <img src="hiban6.png" alt="">
+            </div>
+
+            <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80%" id="blobSvg">
+                    <path  fill="#12f7ff">
+                        <animate attributeName="d"
+                        dur="10000ms"
+                        repeatCount="indefinite"
+                        values="M418.5,318.5Q387,387,318.5,403.5Q250,420,184,401Q118,382,74.5,316Q31,250,58,167.5Q85,85,167.5,55Q250,25,303.5,84Q357,143,403.5,196.5Q450,250,418.5,318.5Z;
+                        
+                        M448,332.5Q415,415,332.5,452.5Q250,490,179.5,440.5Q109,391,64.5,320.5Q20,250,56.5,171.5Q93,93,171.5,91.5Q250,90,313.5,106.5Q377,123,429,186.5Q481,250,448,332.5Z;
+                        M421,305.5Q361,361,305.5,411Q250,461,172.5,433Q95,405,67,327.5Q39,250,82,187.5Q125,125,187.5,106Q250,87,327.5,91Q405,95,443,172.5Q481,250,421,305.5Z;
+                        M440.5,332.5Q415,415,332.5,418.5Q250,422,189.5,396.5Q129,371,85.5,310.5Q42,250,79.5,183.5Q117,117,183.5,100.5Q250,84,338,79Q426,74,446,162Q466,250,440.5,332.5Z;
+                        M418.5,332.5Q415,415,332.5,419Q250,423,188.5,398Q127,373,75.5,311.5Q24,250,74.5,187.5Q125,125,187.5,65.5Q250,6,319.5,58.5Q389,111,405.5,180.5Q422,250,418.5,332.5Z;
+                        M393,309.5Q369,369,309.5,409.5Q250,450,191,409Q132,368,66,309Q0,250,70.5,195.5Q141,141,195.5,77Q250,13,326.5,55Q403,97,410,173.5Q417,250,393,309.5Z;
+                        M418.5,318.5Q387,387,318.5,403.5Q250,420,184,401Q118,382,74.5,316Q31,250,58,167.5Q85,85,167.5,55Q250,25,303.5,84Q357,143,403.5,196.5Q450,250,418.5,318.5Z;"></animate>
+                    </path>
+                  </svg>
+            </div>
+            
+            <div class="liquid-shape">
+                <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80%" id="blobSvg">
+                    <path  fill="#12f7ff">
+                        <animate attributeName="d"
+                        dur="10000ms"
+                        repeatCount="indefinite"
+                        values="M418.5,318.5Q387,387,318.5,403.5Q250,420,184,401Q118,382,74.5,316Q31,250,58,167.5Q85,85,167.5,55Q250,25,303.5,84Q357,143,403.5,196.5Q450,250,418.5,318.5Z;
+                        
+                        M448,332.5Q415,415,332.5,452.5Q250,490,179.5,440.5Q109,391,64.5,320.5Q20,250,56.5,171.5Q93,93,171.5,91.5Q250,90,313.5,106.5Q377,123,429,186.5Q481,250,448,332.5Z;
+                        M421,305.5Q361,361,305.5,411Q250,461,172.5,433Q95,405,67,327.5Q39,250,82,187.5Q125,125,187.5,106Q250,87,327.5,91Q405,95,443,172.5Q481,250,421,305.5Z;
+                        M440.5,332.5Q415,415,332.5,418.5Q250,422,189.5,396.5Q129,371,85.5,310.5Q42,250,79.5,183.5Q117,117,183.5,100.5Q250,84,338,79Q426,74,446,162Q466,250,440.5,332.5Z;
+                        M418.5,332.5Q415,415,332.5,419Q250,423,188.5,398Q127,373,75.5,311.5Q24,250,74.5,187.5Q125,125,187.5,65.5Q250,6,319.5,58.5Q389,111,405.5,180.5Q422,250,418.5,332.5Z;
+                        M393,309.5Q369,369,309.5,409.5Q250,450,191,409Q132,368,66,309Q0,250,70.5,195.5Q141,141,195.5,77Q250,13,326.5,55Q403,97,410,173.5Q417,250,393,309.5Z;
+                        M418.5,318.5Q387,387,318.5,403.5Q250,420,184,401Q118,382,74.5,316Q31,250,58,167.5Q85,85,167.5,55Q250,25,303.5,84Q357,143,403.5,196.5Q450,250,418.5,318.5Z;"></animate>
+                    </path>
+                  </svg>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+
+
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+
+</div>
+
+<script>
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+</script>
+
+<script src="mixitup.min1.js"></script>
+<script src="scriptp.js"></script>
+
+</body>
+</html> 

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Bootstrap Carousel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .carousel-item img {
+      width: 100%;
+      height: 600px;
+      object-fit: cover;
+    }
+    .thumbnail-nav {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .thumbnail-nav img {
+      width: 100px;
+      height: 60px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid transparent;
+    }
+    .thumbnail-nav img.active {
+      border-color: green;
+    }
+  </style>
+</head>
+<body class="bg-dark text-white">
+
+<div id="customCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active"  data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300">
+      <img src="img/im1.jpg" class="d-block w-100" alt="Forest">
+      <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+        <h2 class="display-4">Creating Landmarks</h2>
+      </div>
+    </div>
+    <div class="carousel-item"   data-aos="fade-down" data-aos-duration="1200" data-aos-delay="300">
+      <img src="img/im2.jpg" class="d-block w-100" alt="Waterfall">
+      <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+        <h2 class="display-4">Come say hi to beautiful interiors</h2>
+      </div>
+    </div>
+    <div class="carousel-item"  data-aos="fade-up" data-aos-duration="1200" data-aos-delay="300">
+      <img src="img/im3.jpg" class="d-block w-100" alt="City">
+      <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+        <h2 class="display-4">"Transform your space into a sanctuary that welcomes and inspires."</h2>
+        </div>
+    </div>
+    <div class="carousel-item"  data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+      <img src="img/exe4.jpg" class="d-block w-100" alt="Car">
+      <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+        <h3 class="display-4">Experience the majesty of bespoke homes</h3>
+        </div>
+    </div>
+    <div class="carousel-item"  data-aos="flip-down" data-aos-duration="1200" data-aos-delay="300">
+        <img src="img/exe9.jpg" class="d-block w-100" alt="City">
+        <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+            <h3 class="display-4">"Timeless design, modern living – create a home that’s uniquely yours."</h3>
+            </div>
+    </div>
+    <div class="carousel-item"  data-aos="flip-up" data-aos-duration="1200" data-aos-delay="300">
+        <img src="img/api5.jpg" class="d-block w-100" alt="City">
+        <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+            <h3 class="display-4">"Small spaces, big dreams – make your apartment a haven of comfort and style."</h3>
+            </div>
+    </div>
+    <div class="carousel-item"  data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
+        <img src="img/ap7.jpg" class="d-block w-100" alt="City">
+        <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+            <h4 class="display-4">"Turn your apartment into a cozy retreat that feels like home every day."</h4>
+            </div>
+    </div>
+    <div class="carousel-item"  data-aos="flip-up" data-aos-duration="1200" data-aos-delay="300">
+        <img src="img/layn1.jpg" class="d-block w-100" alt="City">
+        <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+            <h4 class="display-4">"Good layout planning is the foundation of a well-designed space."</h4>
+            </div>
+    </div>
+    <div class="carousel-item"  data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
+        <img src="img/layn2.jpg" class="d-block w-100" alt="City">
+        <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+            <h4 class="display-3">"Create flow and function – the key elements of a well-thought-out layout."</h4>
+            </div>
+    </div>
+    <div class="carousel-item"  data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
+      <img src="img/layn3.jpg" class="d-block w-100" alt="City">
+      <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+          <h4 class="display-3">"Create flow and function – the key elements of a well-thought-out layout."</h4>
+          </div>
+  </div>
+  <div class="carousel-item"  data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
+    <img src="img/layn4.jpg" class="d-block w-100" alt="City">
+    <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+        <h4 class="display-3">"Create flow and function – the key elements of a well-thought-out layout."</h4>
+        </div>
+</div>
+<div class="carousel-item"  data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
+  <img src="img/layn5.jpg" class="d-block w-100" alt="City">
+  <div class="carousel-caption d-none d-md-block p-3" style="background-color:rgba(0,0, 0,0.3);">
+      <h4 class="display-3">"Create flow and function – the key elements of a well-thought-out layout."</h4>
+      </div>
+</div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#customCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#customCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="thumbnail-nav mt-3">
+  <img src="img/im1.jpg" alt="Forest" data-bs-target="#customCarousel" data-bs-slide-to="0" class="active">
+  <img src="img/im2.jpg" alt="Waterfall" data-bs-target="#customCarousel" data-bs-slide-to="1">
+  <img src="img/im3.jpg" alt="City" data-bs-target="#customCarousel" data-bs-slide-to="2">
+  <img src="img/exe4.jpg" alt="Car" data-bs-target="#customCarousel" data-bs-slide-to="3">
+  <img src="img/exe9.jpg" alt="Car" data-bs-target="#customCarousel" data-bs-slide-to="4">
+  <img src="img/api5.jpg" alt="Car" data-bs-target="#customCarousel" data-bs-slide-to="5">
+  <img src="img/ap7.jpg" alt="Car" data-bs-target="#customCarousel" data-bs-slide-to="6">
+  <img src="img/layn1.jpg" alt="Car" data-bs-target="#customCarousel" data-bs-slide-to="7">
+  <img src="img/layn2.jpg" alt="Car" data-bs-target="#customCarousel" data-bs-slide-to="8">
+  <img src="img/layn3.jpg" alt="Car" data-bs-target="#customCarousel" data-bs-slide-to="9">
+  <img src="img/layn4.jpg" alt="Car" data-bs-target="#customCarousel" data-bs-slide-to="10">
+  <img src="img/layn5.jpg" alt="Car" data-bs-target="#customCarousel" data-bs-slide-to="11">
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+  // Highlight active thumbnail
+  document.querySelectorAll('.thumbnail-nav img').forEach((thumbnail, index) => {
+    thumbnail.addEventListener('click', () => {
+      document.querySelectorAll('.thumbnail-nav img').forEach(img => img.classList.remove('active'));
+      thumbnail.classList.add('active');
+    });
+  });
+
+  // Change thumbnail highlight on slide and refresh AOS on slide change
+  const carousel = document.querySelector('#customCarousel');
+  carousel.addEventListener('slid.bs.carousel', () => {
+    const activeIndex = carousel.querySelector('.carousel-item.active').getAttribute('data-bs-slide-to');
+    document.querySelectorAll('.thumbnail-nav img').forEach((img, index) => {
+      img.classList.toggle('active', index == activeIndex);
+    });
+  });
+</script>
+
+</body>
+</html>

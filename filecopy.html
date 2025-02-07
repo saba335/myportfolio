@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover/Click Effect with Side Content</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Prevent horizontal scrolling */
+        html, body {
+            overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container for each card and the hidden details */
+        .card-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+            margin-bottom: 14px;
+            overflow: hidden;
+            width: 170%;
+            /* flex-wrap: wrap; */
+        }
+
+        /* Card styling */
+        .card-card {
+            flex: 1;
+            cursor: pointer;
+            border: none;
+            box-shadow: none;
+            transition: flex 0.5s ease-in-out;
+        }
+
+        .card-card .card-body {
+            width: 100%;
+            padding: 55px;
+            background-color: blue;
+            color: white;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .card-body p {
+            font-size: 30px;
+           
+        }
+
+        /* Hidden details container initially hidden */
+        .card-details {
+            visibility: hidden;
+            opacity: 0;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-left: 15px;
+            transition: visibility 0s, opacity 0.5s ease-in-out;
+            flex-wrap: wrap;
+        }
+
+        /* Hover effect for shrinking the card body on desktop/laptops */
+        @media (hover: hover) and (pointer: fine) {
+            .card-container:hover .card-card {
+                flex: 0.2;
+                width: 30%;
+            }
+
+            /* Show the details when hovering over the card */
+            .card-container:hover .card-details {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+
+        /* Show details and shrink the card on click for mobile */
+        .card-container.hover-active .card-card {
+            flex: 0.4;
+        }
+
+        .card-container.hover-active .card-details {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Individual card styling for details */
+        .detail-card {
+            background-color: #9e9e9b;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            border-radius: 5px;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            flex: 1 1 200px;
+        }
+
+        /* Hover effect to trigger animation on hover (for desktop/laptops) */
+        @media (hover: hover) and (pointer: fine) {
+            .card-container:hover .detail-card {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Show details on mobile when hover-active class is applied */
+        .card-container.hover-active .detail-card {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Define animation delays specifically for hover state (for desktop/laptops) */
+        @media (hover: hover) and (pointer: fine) {
+            .card-container:hover .card-details .detail-card:nth-child(1) {
+                transition-delay: 0.6s;
+            }
+
+            .card-container:hover .card-details .detail-card:nth-child(2) {
+                transition-delay: 0.9s;
+            }
+
+            .card-container:hover .card-details .detail-card:nth-child(3) {
+                transition-delay: 1.3s;
+            }
+        }
+
+        /* Animation delays for mobile when hover-active class is applied */
+        .card-container.hover-active .card-details .detail-card:nth-child(1) {
+            transition-delay: 0.6s;
+        }
+
+        .card-container.hover-active .card-details .detail-card:nth-child(2) {
+            transition-delay: 0.9s;
+        }
+
+        .card-container.hover-active .card-details .detail-card:nth-child(3) {
+            transition-delay: 1.3s;
+        }
+
+      /* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-card {
+        flex: 1 1 100%;
+        transition: flex 0.5s ease-in-out;
+        font-size: 0.8rem; /* Slightly smaller font size */
+        padding: 15px; /* Reduced padding */
+        text-align: center;
+    }
+
+    .card-body {
+        /* Reduced font size */
+        padding: 5px; /* Reduced padding to decrease space */
+        text-align: center;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .card-details {
+        margin-left: 0;
+        gap: 1px; /* Reduced gap between details */
+        justify-content: space-around;
+    }
+    .card-body p {
+        text-align: start !important;
+        font-size: 20px;
+    }
+
+    .card-container {
+        margin-bottom: -5px; /* Smaller margin for mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .card-card {
+        flex: 1 1 100%;
+        transition: flex 0.5s ease-in-out;
+        font-size: 0.5rem; /* Further reduced font size */
+        padding: 4px; /* Even smaller padding */
+        text-align: start !important;
+    }
+
+    .card-body {
+        /* Further reduced font size */
+        padding: 3px; /* Reduced padding for closer spacing */
+        text-align: start !important;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .card-body p {
+        text-align: start !important;
+        font-size: 20px;
+    }
+
+    .detail-card {
+        padding: 6px; /* Reduced padding for compact layout */
+        font-size: 0.7rem; /* Slightly smaller font size */
+        flex: 1 1 100%;
+        margin-bottom: 5px; /* Reduced bottom margin */
+    }
+
+    .card-details {
+        flex-direction: column;
+        gap: 1px; /* Reduced gap between details */
+    }
+
+    .card-container {
+        margin-bottom: -10px; /* Even smaller margin for very small screens */
+     
+    }
+
+    .card-text {
+        text-align: start !important;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid mt-5">
+        <!-- card Container 1 -->
+        <div class="card-container">
+            <!-- card question card -->
+            <div class="card card-card">
+                <div class="card-body"  style="background-image: url(img/back2.jpg);">
+                    <p class="card-text text-center text-white"  style="background-color:rgba(0,0, 0,0.3); display: inline-block; padding: 20px 10px;">Are You an Investor?</p>
+                </div>
+            </div>
+
+            <!-- Side content with details -->
+            <div class="card-details">
+                <!-- First Detail Card -->
+                <div class="detail-card">
+                    <p>Looking for appreciating investment.</p>
+                </div>
+
+                <!-- Second Detail Card -->
+                <div class="detail-card">
+                    <p>Looking for long-term investment.</p>
+                </div>
+
+                <!-- Third Detail Card -->
+                <div class="detail-card">
+                    <p>Looking for secondary income.</p>
+                </div>
+            </div>     
+        </div>
+
+        <!-- card Container 2 -->
+        <div class="card-container">
+            <!-- card question card -->
+            <div class="card card-card">
+                <div class="card-body"  style="background-image: url(img/back3.jpg);">
+                    <p class="card-text text-center text-white"  style="background-color:rgba(0,0, 0,0.3);">Do you have Land to be developed?</p>
+                </div>
+            </div>
+
+            <!-- Side content with details -->
+            <div class="card-details">
+                <!-- First Detail Card -->
+                <div class="detail-card">
+                    <p>Explore our Joint Venture Plant.</p>
+                </div>
+
+                <!-- Second Detail Card -->
+                <div class="detail-card">
+                    <p>Explore our Profit Sharing Model.</p>
+                </div>
+
+                <!-- Third Detail Card -->
+                <div class="detail-card">
+                    <p>Explore our Turnkey Model.</p>
+                </div>
+            </div>     
+        </div>
+
+        <!-- card Container 3 -->
+        <div class="card-container">
+            <!-- card question card -->
+            <div class="card card-card">
+                <div class="card-body"  style="background-image: url(img/back1.jpg);">
+                    <p class="card-text text-center text-white"  style="background-color:rgba(0,0, 0,0.3);">Planning to construct home?</p>
+                </div>
+            </div>
+
+            <!-- Side content with details -->
+            <div class="card-details">
+                <!-- First Detail Card -->
+                <div class="detail-card">
+                    <p>Explore our creative design plan.</p>
+                </div>
+
+                <!-- Second Detail Card -->
+                <div class="detail-card">
+                    <p>Explore our customized End to End Model.</p>
+                </div>
+            </div>     
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Select all card containers
+            const cardContainers = document.querySelectorAll('.card-container');
+
+            // Check if the device is a touch device
+            if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+                cardContainers.forEach(function (container) {
+                    // Toggle hover-active class on click for mobile devices
+                    container.addEventListener('click', function () {
+                        container.classList.toggle('hover-active');
+                    });
+                });
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 40px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .cover-box {
+            border: solid 1px #dee1e4;
+            width: 100%;
+            padding: 100px;
+            background-color: #292f36;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            border: solid 1px #d3d9e0;
+            margin-left: 10px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #d3d9e0;
+            text-align: center;
+            font-size: 25px;
+        }
+
+        .cover-box:hover {
+            width: 25%;
+            flex-shrink: 0.2;
+        }
+
+        .cover-box:hover ~ .box {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Adjustments */
+        @media screen and (max-width: 425px) {
+            .cover-box {
+                border: solid 1px #292f36;
+                width: 100%;
+                padding: 50px 0;
+                background-color: #292f36;
+                border-radius: 10px;
+                color: white;
+                text-align: center;
+                font-size: 15px;
+            }
+
+            .box {
+                padding: 50px 0;
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="cover-box"> Are You an Investor? </div>
+        <div class="box">Looking for appreciating investment.</div>
+        <div class="box">Looking for long-term investment.</div>
+        <div class="box">Looking for secondary income.</div>
+    </div>
+    <div class="main">
+        <div class="cover-box"> Do you have Land to be developed? </div>
+        <div class="box">Explore our Joint Venture Plan.</div>
+        <div class="box">Explore our Profit Sharing Model.</div>
+        <div class="box">Explore our Turnkey Model.</div>
+    </div>
+    <div class="main">
+        <div class="cover-box"> Planning to construct a home? </div>
+        <div class="box">Explore our creative design plan.</div>
+        <div class="box">Explore our customized End to End Model.</div>
+    </div>
+
+</body>
+</html>

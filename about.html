@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ansh River Resort</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+      .block-20 {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* Aspect ratio of 4:3 */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .block-20:hover {
+    transform: scale(1.1); /* Zoom in */
+  }
+
+
+
+  .bg-image {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .parallax {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .btn-custom {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+  }
+
+  .btn-custom:hover {
+    background-color: #29b866;
+    color: #333;
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+
+
+  .icon {
+      font-size: 1.5rem;
+      color: #006400;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+    }
+    .list-item-icon {
+      font-size: 1.2rem;
+      margin-right: 10px;
+    }
+    .highlight {
+      color: #28a745;
+      font-weight: bold;
+    }
+    .carousel-item img{
+        max-height: 100%;
+        min-height: 370px;
+    }
+
+ /* Timeline container */
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 30px; /* Space between items */
+  padding: 40px 0;
+  list-style-type: none;
+  justify-items: center; /* Center align items within each column */
+}
+
+/* Timeline item */
+.timeline-item {
+  position: relative;
+  text-align: center;
+}
+
+/* Timeline icon */
+.timeline-item .timeline-icon {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  margin: 0 auto; /* Center the icon */
+}
+
+/* Timeline content */
+.timeline-item .timeline-content {
+  margin-top: 10px; /* Space between icon and text */
+  text-align: center;
+}
+
+/* Title for each timeline item */
+.timeline-item .timeline-content h5 {
+  margin: 0;
+  font-size: 18px;
+}
+
+/* Description text */
+.timeline-item .timeline-content p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .timeline {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    grid-template-columns: 1fr; /* 1 item per row on very small screens */
+  }
+}
+ .overlay1{
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: '';
+    opacity: 1;
+    background: #fff;
+    background: white;
+    background: -moz-linear-gradient(top, white 0%, white 3%, rgba(255, 255, 255, 0) 54%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, white), color-stop(3%, white), color-stop(54%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)));
+    background: -webkit-linear-gradient(top, white 0%, white 3%, rgba(255, 255, 255, 0) 54%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(top, white 0%, white 3%, rgba(255, 255, 255, 0) 54%, rgba(255, 255, 255, 0) 100%);
+    background: -ms-linear-gradient(top, white 0%, white 3%, rgba(255, 255, 255, 0) 54%, rgba(255, 255, 255, 0) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, white), color-stop(54%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0)));
+    background: linear-gradient(to bottom, white 0%, white 3%, rgba(255, 255, 255, 0) 54%, rgba(255, 255, 255, 0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+    height: 850px; }
+
+
+    .block-20 {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* Aspect ratio of 4:3 */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .block-20:hover {
+    transform: scale(1.1); /* Zoom in */
+  }
+
+
+
+  .bg-image {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .parallax {
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  .btn-custom {
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+  }
+
+  .btn-custom:hover {
+    background-color: #29b866;
+    color: #333;
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
+/* Center-align text for smaller screens */
+@media (max-width: 768px) {
+  .ftco-footer-widget {
+    text-align: center;
+  }
+
+  .ftco-footer-widget ul {
+    padding: 0;
+  }
+
+  .ftco-footer-widget ul li {
+    margin-bottom: 10px;
+  }
+
+  .ftco-footer-social {
+    display: flex;
+    justify-content: center;
+  }
+}
+    </style>
+  </head>
+  <body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand"  data-aos="zoom-in-up"  data-aos-duration="1500" href="index.html">          <img src="img/logo.png" alt="ansh logo" style="height: 70px;">
+        </a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item active"    data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"><a href="indexres.html" class="nav-link">Home</a></li>
+	          <li class="nav-item"   data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"><a href="about.html" class="nav-link">About</a></li>
+            <li class="nav-item dropdown" data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500">
+            <a class="nav-link dropdown-toggle" href="#" id="termsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Terms & Conditions
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="termsDropdown">
+                <li><a class="dropdown-item" href="Booking.html">Booking Policy</a></li>
+                <li><a class="dropdown-item" href="cancellation&refund.html">Cancellation&Refund</a></li>
+                <li><a class="dropdown-item" href="resort.html">Resort Policy</a></li>
+            </ul>
+        </li>
+        
+	          <li class="nav-item"   data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"><a href="blog.html" class="nav-link">Gallery</a></li>
+	          <li class="nav-item"   data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"><a href="servicesres.html" class="nav-link">Amenities</a></li>
+            <li class="nav-item"   data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"><a href="contact.html" class="nav-link">Contact</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('img/slider1.jpg');" data-stellar-background-ratio="0.5" data-aos="zoom-in-up" data-aos-duration="2000">
+      <div class="overlay1"></div>
+      <div class="container">
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>About us <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread">About Us</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+      <!-- About Section -->
+      <div class="container py-5">
+      <section id="about" style="margin-top: 10%;">
+        <div class="row">
+            <!-- Image Slider -->
+            <div class="col-lg-6">
+              <div id="aboutSlider" class="carousel slide" data-ride="carousel"   data-interval="2000">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="img/slider1.jpg" alt="Resort View 1" class="d-block w-100 img-fluid rounded shadow">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/abt1.jpg" alt="Resort View 2" class="d-block w-100 img-fluid rounded shadow">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="img/slide3.jpeg" alt="Resort View 3" class="d-block w-100 img-fluid rounded shadow">
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#aboutSlider" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#aboutSlider" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+        
+            <!-- Content -->
+            <div class="col-lg-6">
+              <h2 class="section-title">About Ansh Resort</h2>
+              <p>
+                Ansh is a journey into the self, where you pause, reflect, and renew your connection with all that is accorded by nature and to the human spirit and body. Overlooking the pristine <span class="highlight">Kali River</span> (Dandeli’s spiritual symbol), the resort is neighbored by <span class="highlight">Moulangi Eco Nature Park</span> and Town on one side and the sunset paradise of Old Dandeli Bridge on the other.
+              </p>
+              <p>
+                Cradled by 2 acres of rolling hills and gardens, the resort is adorned with coconut palms, flowers, shrubs, and spices. Beyond the lawns is a vegetable garden and paddy fields, providing farm-fresh nourishment for guests. Inspired by the traditions and crafts of the <span class="highlight">Uttara Kannada</span> region, Ansh Resort is your sanctuary for spiritual enlightenment and self-discovery.
+              </p>
+            </div>
+          </div>
+    </section>
+      </div>
+
+		<!-- <section class="ftco-section ftco-no-pb">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-md-6 p-md-5 img img-2 d-flex justify-content-center align-items-center" style="background-image: url(images/about.jpg);">
+					</div>
+					<div class="col-md-6 wrap-about py-md-5 ftco-animate">
+	          <div class="heading-section p-md-5">
+	            <h2 class="mb-4">We Put People First.</h2>
+
+	            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+	            <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
+	          </div>
+					</div>
+				</div>
+			</div>
+		</section> -->
+
+		<!-- <section class="ftco-counter" id="section-counter">
+    	<div class="container">
+    		<div class="row">
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 py-4 mb-4">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="305">0</strong>
+                <span>Area <br>Population</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 py-4 mb-4">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="1090">0</strong>
+                <span>Total <br>Properties</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 py-4 mb-4">
+              <div class="text text-border d-flex align-items-center">
+                <strong class="number" data-number="209">0</strong>
+                <span>Average <br>House</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
+            <div class="block-18 py-4 mb-4">
+              <div class="text d-flex align-items-center">
+                <strong class="number" data-number="67">0</strong>
+                <span>Total <br>Branches</span>
+              </div>
+            </div>
+          </div>
+        </div>
+    	</div>
+    </section> -->
+
+    <section class="ftco-section testimony-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">Testimonial</span>
+            <h2 class="mb-3">Happy Clients</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Its very higine, clean, river view Resort. Humble prompt and friendly staff. Food was extraordinary. Specially I like river water activities like Zorbin
+                      Kayaking ride and river boating
+                      Which ty r provided in package.
+                      Totally its a amazing experience me and my family.
+                    </p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">
+                          Mohan Patil</p>
+		                    <!-- <span class="position">Marketing Manager</span> -->
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">It's wonderful resort we enjoyed a lot and service was extremely good rooms were clean and staff were approachable i suggest every one to visit this resort (ansh resort) even food was hygiene especially abhisek was really approachable for every thing.
+                      Thank you</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">
+                          Alam syed</p>
+		                    <!-- <span class="position">Marketing Manager</span> -->
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">*5/5 Stars - Wonderful Experience at Ansh Resort!*
+                      "I recently spent two incredible days at Ansh Resort, and I must say, it exceeded all my expectations! The resort's location is picturesque, offering a serene and peaceful atmosphere that's perfect for relaxation.
+  
+                     </p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_3.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">
+                          Santosh Reddy</p>
+		                    <!-- <span class="position">Marketing Manager</span> -->
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">Resort was to wonderful the stay was worth for money the staff illiyas and prakash supported a lot the activitys and rain dance done hear was is worth for money I recommend to visit the resort the location is to peaceful and clam .</p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_1.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">
+                          Vinayak Mirajakar</p>
+		                    <!-- <span class="position">Marketing Manager</span> -->
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap py-4">
+                  <div class="text">
+                    <p class="mb-4">The best resort with friendly and caring environment. Staffs were very supportive. The location and nature was too good and the rooms and room service was incredible.
+                      The resort provides the best water sports and indoor activities.
+                    </p>
+                    <div class="d-flex align-items-center">
+                    	<div class="user-img" style="background-image: url(images/person_2.jpg)"></div>
+                    	<div class="pl-3">
+		                    <p class="name">
+                          Adarsh Kabbur</p>
+		                    <!-- <span class="position">Marketing Manager</span> -->
+		                  </div>
+	                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Things to Carry Section -->
+<section id="things-to-carry" class="py-5">
+  <h2 class="section-title text-center">Things to Carry</h2>
+  <div class="container">
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-glasses"></i>
+        </div>
+        <div class="timeline-content">
+          <h5>Sunglasses</h5>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-tshirt"></i> <!-- T-shirt Icon -->
+        </div>
+        <div class="timeline-content">
+          <h5>Extra pair of clothes</h5>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-swimmer"></i> <!-- Swimming Costume Icon -->
+        </div>
+        <div class="timeline-content">
+          <h5>Swimming Costume</h5>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-sun"></i> <!-- Sunscreen Icon -->
+        </div>
+        <div class="timeline-content">
+          <h5>Sunscreen</h5>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-camera"></i> <!-- Camera Icon -->
+        </div>
+        <div class="timeline-content">
+          <h5>Camera</h5>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-hiking"></i> <!-- Hiking Icon for Trekking Shoes -->
+        </div>
+        <div class="timeline-content">
+          <h5>Trekking Shoes and Stick</h5>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-lightbulb"></i> <!-- Torch Icon (lightbulb used as alternative) -->
+        </div>
+        <div class="timeline-content">
+          <h5>Torch</h5>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-hat-cowboy"></i> <!-- Hat Icon -->
+        </div>
+        <div class="timeline-content">
+          <h5>Hat</h5>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <i class="fas fa-shoe-prints"></i> <!-- Flip-Flop Slippers Icon -->
+        </div>
+        <div class="timeline-content">
+          <h5>Flip-Flop Slippers</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="section bg-image overlay parallax" style="padding: 80px;background-image: url('img/home7.jpg');">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-6 text-center mb-4 mb-md-0 text-md-left" data-aos="fade-up">
+            <h2 class="text-white font-weight-bold">A Best Place To Stay. Reserve Now!</h2>
+          </div>
+          <div class="col-12 col-md-6 text-center text-md-right" data-aos="fade-up" data-aos-delay="200">
+            <a href="reservation.html" class="btn-custom">Reserve Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+      <footer class="ftco-footer ftco-section" style="background-image: url(img/12.jpg);margin-bottom: 0;">
+      <div class="container" >
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2"> <img src="img/logo.png" alt="ansh logo" style="height: 100px;"></h2>
+              <p>Ansh River Resort offers a serene retreat for self-reflection, renewal, and reconnecting with nature and the human spirit.</p>
+              <ul class="ftco-footer-social list-unstyled mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter" style="color: #29b866;"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook" style="color: #29b866;"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram" style="color: #29b866;"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">community</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>Search Properties</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>For Agents</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>Reviews</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>FAQs</a></li>
+              </ul>
+            </div>
+          </div> -->
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-4">
+              <h2 class="ftco-heading-2">Terms&Conditions</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>Booking Policy</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>Cancellation&Refund</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>Resort Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Quick Links</h2>
+              <ul class="list-unstyled">
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>Home</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>About Us</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>Gallery</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>Amenities</a></li>
+                <li><a href="#"><span class="icon-long-arrow-right mr-2" style="color: #29b866;"></span>Contact</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker" style="color: #29b866;"></span><span class="text">
+                    ANSH RIVER RESORT, BESIDES MOULANGI ECO PARK , DANDELI-581325</span></li>
+	                <li><a href="#"><span class="icon icon-phone" style="color: #29b866;" ></span><span class="text" style="color: #29b866;">+91 8188850777</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope pr-4" style="color: #29b866;"></span><span class="text" style="color: #29b866;">anshresortdandeli@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="col-md-12 text-center"> -->
+	
+            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+          <!-- </div>
+        </div> -->
+      </div>
+    </footer>
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
